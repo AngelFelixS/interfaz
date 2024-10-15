@@ -35,28 +35,40 @@ public class HelloController {
             case "menuProductos"->{
                 if (menuProductos1.getOpacity()!=1) {
                     menuProductos1.setOpacity(1);
+                    menuProductos1.setDisable(false);
                     menuProductos2.setOpacity(1);
+                    menuProductos2.setDisable(false);
                 } else {
                     menuProductos1.setOpacity(0);
+                    menuProductos1.setDisable(true);
                     menuProductos2.setOpacity(0);
+                    menuProductos2.setDisable(true);
                 }
             }
             case "menuClientes"->{
                 if (menuClientes1.getOpacity()!=1) {
                     menuClientes1.setOpacity(1);
+                    menuClientes1.setDisable(false);
                     menuClientes2.setOpacity(1);
+                    menuClientes2.setDisable(false);
                 } else {
                     menuClientes1.setOpacity(0);
+                    menuClientes1.setDisable(true);
                     menuClientes2.setOpacity(0);
+                    menuClientes2.setDisable(true);
                 }
             }
             case "menuProveedores"->{
                 if (menuProveedores1.getOpacity()!=1) {
                     menuProveedores1.setOpacity(1);
+                    menuProveedores1.setDisable(false);
                     menuProveedores2.setOpacity(1);
+                    menuProveedores2.setDisable(false);
                 } else {
                     menuProveedores1.setOpacity(0);
+                    menuProveedores1.setDisable(true);
                     menuProveedores2.setOpacity(0);
+                    menuProveedores2.setDisable(true);
                 }
             }
         }
