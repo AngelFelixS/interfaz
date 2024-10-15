@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 public class HelloController {
     @FXML
@@ -61,13 +63,13 @@ public class HelloController {
     }
 
     @FXML
-    protected void onMouseOver(ActionEvent event){
-
-    }
-
-    @FXML
-    protected void onMouseExited(){
-        menuProveedores1.setOpacity(0);
-        menuProveedores2.setOpacity(0);
+    protected void onClickOpcion(ActionEvent event){
+        String src=event.getSource().toString();
+        String id=src.split("=")[1].split(",")[0];
+        switch (id){
+            case "menuProveedores1"->{
+                HelloApplication.cambiarScene("darAltaProductos.fxml");
+            }
+        }
     }
 }
