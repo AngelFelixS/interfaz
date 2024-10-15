@@ -1,18 +1,73 @@
 package com.interfaz.interfaz;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private Button menuProductos;
     @FXML
-    private Button button;
+    private Button menuClientes;
+    @FXML
+    private Button menuProveedores;
+    @FXML
+    private Button menuProveedores1;
+    @FXML
+    private Button menuProveedores2;
+    @FXML
+    private Button menuProductos1;
+    @FXML
+    private Button menuProductos2;
+    @FXML
+    private Button menuClientes1;
+    @FXML
+    private Button menuClientes2;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-        button.setText("ewwseds");
+    protected void onMenuClick(ActionEvent event) {
+        String src=event.getSource().toString();
+        String id=src.split("=")[1].split(",")[0];
+        switch (id){
+            case "menuProductos"->{
+                if (menuProductos1.getOpacity()!=1) {
+                    menuProductos1.setOpacity(1);
+                    menuProductos2.setOpacity(1);
+                } else {
+                    menuProductos1.setOpacity(0);
+                    menuProductos2.setOpacity(0);
+                }
+            }
+            case "menuClientes"->{
+                if (menuClientes1.getOpacity()!=1) {
+                    menuClientes1.setOpacity(1);
+                    menuClientes2.setOpacity(1);
+                } else {
+                    menuClientes1.setOpacity(0);
+                    menuClientes2.setOpacity(0);
+                }
+            }
+            case "menuProveedores"->{
+                if (menuProveedores1.getOpacity()!=1) {
+                    menuProveedores1.setOpacity(1);
+                    menuProveedores2.setOpacity(1);
+                } else {
+                    menuProveedores1.setOpacity(0);
+                    menuProveedores2.setOpacity(0);
+                }
+            }
+        }
+    }
+
+    @FXML
+    protected void onMouseOver(ActionEvent event){
+
+    }
+
+    @FXML
+    protected void onMouseExited(){
+        menuProveedores1.setOpacity(0);
+        menuProveedores2.setOpacity(0);
     }
 }
