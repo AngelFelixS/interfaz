@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<?import java.awt.Button?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragOver="#onHelloButtonClick" prefHeight="720.0" prefWidth="1280.0"
       xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.HelloController">
     <children>
         <Button fx:id="menuProductos" contentDisplay="CENTER" layoutY="1.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="128.0" prefWidth="425.0" text="Productos" />
         <Button fx:id="menuClientes" layoutX="425.0" layoutY="1.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="425.0" text="Clientes" />
         <Button fx:id="menuProveedores" layoutX="850.0" layoutY="1.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="431.0" text="Proveedores" />
-
+        <Button layoutY="129.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="425.0" text="Dar de alta" />
+        <Button layoutX="425.0" layoutY="129.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="425.0" text="Dar de Alta" />
+        <Button layoutX="850.0" layoutY="129.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="431.0" text="Dar de Alta" />
+        <Button layoutY="257.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
+        <Button layoutX="425.0" layoutY="257.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
+        <Button layoutX="850.0" layoutY="257.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="431.0" text="Búsqueda" />
     </children>
 </Pane>
 
