@@ -1,5 +1,6 @@
 package com.interfaz.interfaz;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,6 +12,18 @@ public class HelloController {
     private Button menuClientes;
     @FXML
     private Button menuProveedores;
+    @FXML
+    private Button menuProveedores1;
+    @FXML
+    private Button menuProveedores2;
+    @FXML
+    private Button menuProductos1;
+    @FXML
+    private Button menuProductos2;
+    @FXML
+    private Button menuClientes1;
+    @FXML
+    private Button menuClientes2;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -21,6 +34,13 @@ public class HelloController {
 
     @FXML
     protected void onMouseOver(){
-        menuProveedores.setOpacity(1);
+        menuProveedores1.setOpacity(1);
+        menuProveedores2.setOpacity(1);
+    }
+
+    @FXML
+    protected void onMouseExited(){
+        menuProveedores1.setOpacity(0);
+        menuProveedores2.setOpacity(0);
     }
 }
