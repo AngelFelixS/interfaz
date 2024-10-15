@@ -5,6 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class HelloController {
+    public Button menuProductos;
+    public Button menuClientes;
+    public Button menuProveedores;
     @FXML
     private Label welcomeText;
     @FXML
