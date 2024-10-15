@@ -7,7 +7,7 @@
    <children>
       <Button fx:id="menuProductos" contentDisplay="CENTER" layoutY="1.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="128.0" prefWidth="425.0" text="Productos" />
       <Button fx:id="menuClientes" layoutX="425.0" layoutY="1.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="425.0" text="Clientes" />
-      <Button fx:id="menuProveedores" layoutX="850.0" layoutY="1.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="431.0" text="Proveedores" />
+      <Button fx:id="menuProveedores" layoutX="850.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#onMouseOver" prefHeight="128.0" prefWidth="431.0" text="Proveedores" />
 
    </children>
 </Pane>
