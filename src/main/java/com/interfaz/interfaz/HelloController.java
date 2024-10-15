@@ -67,9 +67,12 @@ public class HelloController {
         String src=event.getSource().toString();
         String id=src.split("=")[1].split(",")[0];
         switch (id){
-            case "menuProveedores1"->{
-                HelloApplication.cambiarScene("darAltaProductos.fxml");
-            }
+            case "menuProductos1"->HelloApplication.cambiarScene("darAltaProductos.fxml");
+            case "menuProductos2"->HelloApplication.cambiarScene("busquedaProductos.fxml");
+            case "menuClientes1"->HelloApplication.cambiarScene("darAltaClientes.fxml");
+            case "menuClientes2"->HelloApplication.cambiarScene("busquedaClientes.fxml");
+            case "menuProveedores1"->HelloApplication.cambiarScene("darAltaProveedor.fxml");
+            case "menuProveedores2"->HelloApplication.cambiarScene("busquedaProveedores.fxml");
         }
     }
 }
