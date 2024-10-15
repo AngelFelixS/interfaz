@@ -26,16 +26,43 @@ public class HelloController {
     private Button menuClientes2;
 
     @FXML
-    protected void onHelloButtonClick() {
-        menuClientes.setText("Welcome to JavaFX Application!");
-        menuProductos.setText("ewwseds");
-        menuProveedores.setOpacity(0);
+    protected void onMenuClick(ActionEvent event) {
+        String src=event.getSource().toString();
+        String id=src.split("=")[1].split(",")[0];
+        switch (id){
+            case "menuProductos"->{
+                if (menuProductos1.getOpacity()!=1) {
+                    menuProductos1.setOpacity(1);
+                    menuProductos2.setOpacity(1);
+                } else {
+                    menuProductos1.setOpacity(0);
+                    menuProductos2.setOpacity(0);
+                }
+            }
+            case "menuClientes"->{
+                if (menuClientes1.getOpacity()!=1) {
+                    menuClientes1.setOpacity(1);
+                    menuClientes2.setOpacity(1);
+                } else {
+                    menuClientes1.setOpacity(0);
+                    menuClientes2.setOpacity(0);
+                }
+            }
+            case "menuProveedores"->{
+                if (menuProveedores1.getOpacity()!=1) {
+                    menuProveedores1.setOpacity(1);
+                    menuProveedores2.setOpacity(1);
+                } else {
+                    menuProveedores1.setOpacity(0);
+                    menuProveedores2.setOpacity(0);
+                }
+            }
+        }
     }
 
     @FXML
-    protected void onMouseOver(){
-        menuProveedores1.setOpacity(1);
-        menuProveedores2.setOpacity(1);
+    protected void onMouseOver(ActionEvent event){
+
     }
 
     @FXML
