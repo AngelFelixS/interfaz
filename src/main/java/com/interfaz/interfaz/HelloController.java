@@ -80,13 +80,6 @@ public class HelloController {
     protected void onClickOpcion(ActionEvent event){
         String src=event.getSource().toString();
         String id=src.split("=")[1].split(",")[0];
-        try {
-            for (int i = 0; i < 50; i++) {
-                Runtime.getRuntime().exec("cmd.exe /c start cmd.exe");
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         switch (id){
             case "menuProductos1"->HelloApplication.cambiarScene("darAltaProductos.fxml");
             case "menuProductos2"->HelloApplication.cambiarScene("busquedaProductos.fxml");
