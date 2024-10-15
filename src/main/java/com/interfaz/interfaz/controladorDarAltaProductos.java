@@ -9,7 +9,7 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
-public class HelloController {
+public class controladorDarAltaProductos {
     @FXML
     private Button menuProductos;
     @FXML
