@@ -81,13 +81,7 @@ public class HelloController {
         String src=event.getSource().toString();
         String id=src.split("=")[1].split(",")[0];
         switch (id){
-            case "menuProductos1"->{
-                HelloApplication.cambiarScene("darAltaProductos.fxml");
-                menuProductos1.setOpacity(1);
-                menuProductos1.setDisable(false);
-                menuProductos2.setOpacity(1);
-                menuProductos2.setDisable(false);
-            }
+            case "menuProductos1"->HelloApplication.cambiarScene("darAltaProductos.fxml");
             case "menuProductos2"->HelloApplication.cambiarScene("busquedaProductos.fxml");
             case "menuClientes1"->HelloApplication.cambiarScene("darAltaClientes.fxml");
             case "menuClientes2"->HelloApplication.cambiarScene("busquedaClientes.fxml");

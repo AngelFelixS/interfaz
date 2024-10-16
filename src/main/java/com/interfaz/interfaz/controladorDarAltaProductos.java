@@ -11,6 +11,10 @@ import java.io.IOException;
 
 public class controladorDarAltaProductos {
     @FXML
+    private Button confirmar;
+    @FXML
+    private Button volver;
+    @FXML
     private Button menuProductos;
     @FXML
     private Button menuClientes;
@@ -94,5 +98,10 @@ public class controladorDarAltaProductos {
             case "menuProveedores1"->HelloApplication.cambiarScene("darAltaProveedor.fxml");
             case "menuProveedores2"->HelloApplication.cambiarScene("busquedaProveedores.fxml");
         }
+    }
+
+    @FXML
+    protected void onClickVolver(){
+        HelloApplication.cambiarScene("menu.fxml");
     }
 }
