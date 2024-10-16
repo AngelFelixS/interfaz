@@ -3,18 +3,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.HelloController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.HelloController">
    <children>
       <Button fx:id="menuProductos" contentDisplay="CENTER" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="128.0" prefWidth="425.0" text="Productos" />
       <Button fx:id="menuClientes" layoutX="425.0" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="128.0" prefWidth="425.0" text="Clientes" />
       <Button fx:id="menuProveedores" layoutX="850.0" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="128.0" prefWidth="431.0" text="Proveedores" />
-      <Button fx:id="menuProductos1" layoutY="129.0" disable="true" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de alta" />
-      <Button fx:id="menuClientes1" layoutX="425.0" disable="true" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de Alta" />
-      <Button fx:id="menuProveedores1" layoutX="850.0" disable="true" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Dar de Alta" />
-      <Button fx:id="menuProductos2" layoutY="257.0" disable="true" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
-      <Button fx:id="menuClientes2" layoutX="425.0" layoutY="257.0" disable="true" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
-      <Button fx:id="menuProveedores2" layoutX="850.0" layoutY="257.0" disable="true" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Búsqueda" />
-      <fx:include source="darAltaClientes.fxml" fx:id="f" opacity="0.0" disable="true"/>
+      <Button fx:id="menuProductos1" disable="true" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de alta" />
+      <Button fx:id="menuClientes1" disable="true" layoutX="425.0" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de Alta" />
+      <Button fx:id="menuProveedores1" disable="true" layoutX="850.0" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Dar de Alta" />
+      <Button fx:id="menuProductos2" disable="true" layoutY="265.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
+      <Button fx:id="menuClientes2" disable="true" layoutX="425.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
+      <Button fx:id="menuProveedores2" disable="true" layoutX="850.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Búsqueda" />
+      <fx:include fx:id="f" disable="true" opacity="0.0" source="darAltaClientes.fxml" />
 
    </children>
 </Pane>
