@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -16,13 +17,34 @@
         <Button fx:id="menuClientes2" disable="true" layoutX="425.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
         <Button fx:id="menuProveedores2" disable="true" layoutX="850.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Búsqueda" />
 
-        <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="195.0" text="Dar de alta proveedor" textAlignment="CENTER">
+        <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="206.0" text="Dar de alta proveedor" textAlignment="CENTER">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
         <Button fx:id="volver" onAction="#onClickVolver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
         <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
+        <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="401.0" style="-fx-background-color: grey;">
+            <children>
+                <Label layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="133.0" text="Nombre de la empresa" />
+                <ChoiceBox layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
+                <RadioButton layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="SA" />
+                <RadioButton layoutX="215.0" layoutY="93.0" mnemonicParsing="false" text="SL" />
+                <CheckBox layoutX="232.0" layoutY="170.0" mnemonicParsing="false" text="Tasa de transporte" />
+                <Label layoutX="4.0" layoutY="253.0" prefHeight="25.0" prefWidth="121.0" text="Datos Extra pedido" />
+                <Label layoutX="6.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
+                <Label layoutX="220.0" layoutY="6.0" prefHeight="17.0" prefWidth="150.0" text="DNI" />
+                <Label layoutX="220.0" layoutY="23.0" prefHeight="17.0" prefWidth="133.0" style="-fx-background-color: white;" />
+                <Label layoutX="6.0" layoutY="65.0" prefHeight="17.0" prefWidth="75.0" text="Sector" />
+                <Label layoutX="222.0" layoutY="65.0" prefHeight="17.0" prefWidth="111.0" text="Tipo de empresa" />
+                <Label layoutX="4.0" layoutY="170.0" prefHeight="17.0" prefWidth="186.0" text="Fecha de creación de la empresa" />
+                <Label layoutX="6.0" layoutY="196.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
+                <Label layoutX="9.0" layoutY="284.0" prefHeight="128.0" prefWidth="144.0" style="-fx-background-color: white;" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Pane>
 
 
     </children>
