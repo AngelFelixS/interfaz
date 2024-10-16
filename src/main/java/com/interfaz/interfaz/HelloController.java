@@ -89,4 +89,9 @@ public class HelloController {
             case "menuProveedores2"->HelloApplication.cambiarScene("busquedaProveedores.fxml");
         }
     }
+
+    @FXML
+    protected void onClickVolver(){
+        HelloApplication.cambiarScene("menu.fxml");
+    }
 }
