@@ -4,12 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
 import java.io.IOException;
 
 public class HelloController {
+    @FXML
+    public Pane f;
     @FXML
     private Button menuProductos;
     @FXML
@@ -83,7 +86,10 @@ public class HelloController {
         switch (id){
             case "menuProductos1"->HelloApplication.cambiarScene("darAltaProductos.fxml");
             case "menuProductos2"->HelloApplication.cambiarScene("busquedaProductos.fxml");
-            case "menuClientes1"->HelloApplication.cambiarScene("darAltaClientes.fxml");
+            case "menuClientes1"->{
+                f.setOpacity(1);
+                f.setDisable(false);
+            }
             case "menuClientes2"->HelloApplication.cambiarScene("busquedaClientes.fxml");
             case "menuProveedores1"->HelloApplication.cambiarScene("darAltaProveedor.fxml");
             case "menuProveedores2"->HelloApplication.cambiarScene("busquedaProveedores.fxml");
