@@ -12,7 +12,11 @@ import java.io.IOException;
 
 public class HelloController {
     @FXML
-    public Pane f;
+    private Pane altaClientes;
+    @FXML
+    private Pane altaProductos;
+    @FXML
+    private Pane altaProveedores;
     @FXML
     private Button menuProductos;
     @FXML
@@ -84,14 +88,20 @@ public class HelloController {
         String src=event.getSource().toString();
         String id=src.split("=")[1].split(",")[0];
         switch (id){
-            case "menuProductos1"->HelloApplication.cambiarScene("darAltaProductos.fxml");
+            case "menuProductos1"->{
+                altaProductos.setOpacity(1);
+                altaProductos.setDisable(false);
+            }
             case "menuProductos2"->HelloApplication.cambiarScene("busquedaProductos.fxml");
             case "menuClientes1"->{
-                f.setOpacity(1);
-                f.setDisable(false);
+                altaClientes.setOpacity(1);
+                altaClientes.setDisable(false);
             }
             case "menuClientes2"->HelloApplication.cambiarScene("busquedaClientes.fxml");
-            case "menuProveedores1"->HelloApplication.cambiarScene("darAltaProveedor.fxml");
+            case "menuProveedores1"->{
+                altaProveedores.setOpacity(1);
+                altaProveedores.setDisable(false);
+            }
             case "menuProveedores2"->HelloApplication.cambiarScene("busquedaProveedores.fxml");
         }
     }
