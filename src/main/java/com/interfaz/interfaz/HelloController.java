@@ -2,6 +2,7 @@ package com.interfaz.interfaz;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
@@ -13,6 +14,12 @@ import java.io.IOException;
 public class HelloController {
     @FXML
     private Pane altaClientes;
+    @FXML
+    private Pane busquedaClientes;
+    @FXML
+    private Pane busquedaProveedores;
+    @FXML
+    private Pane busquedaProductos;
     @FXML
     private Pane altaProductos;
     @FXML
@@ -92,22 +99,33 @@ public class HelloController {
                 altaProductos.setOpacity(1);
                 altaProductos.setDisable(false);
             }
-            case "menuProductos2"->HelloApplication.cambiarScene("busquedaProductos.fxml");
+            case "menuProductos2"->{
+                busquedaProductos.setOpacity(1);
+                busquedaProductos.setDisable(false);
+            }
             case "menuClientes1"->{
                 altaClientes.setOpacity(1);
                 altaClientes.setDisable(false);
             }
-            case "menuClientes2"->HelloApplication.cambiarScene("busquedaClientes.fxml");
+            case "menuClientes2"->{
+                busquedaClientes.setOpacity(1);
+                busquedaClientes.setDisable(false);
+            }
             case "menuProveedores1"->{
                 altaProveedores.setOpacity(1);
                 altaProveedores.setDisable(false);
             }
-            case "menuProveedores2"->HelloApplication.cambiarScene("busquedaProveedores.fxml");
+            case "menuProveedores2"->{
+                busquedaProveedores.setOpacity(1);
+                busquedaProveedores.setDisable(false);
+            }
         }
     }
 
     @FXML
-    protected void onClickVolver(){
-        HelloApplication.cambiarScene("menu.fxml");
+    protected void onClickVolver(ActionEvent event){
+        Button escena=(Button) event.getSource();
+        escena.getParent().setOpacity(0);
+        escena.getParent().setDisable(true);
     }
 }

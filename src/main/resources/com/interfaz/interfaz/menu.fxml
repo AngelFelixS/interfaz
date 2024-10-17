@@ -7,6 +7,9 @@
    <fx:include fx:id="altaClientes" disable="true" opacity="0.0" source="darAltaClientes.fxml" />
    <fx:include fx:id="altaProductos" disable="true" opacity="0.0" source="darAltaProductos.fxml" />
    <fx:include fx:id="altaProveedores" disable="true" opacity="0.0" source="darAltaProveedor.fxml" />
+   <fx:include fx:id="busquedaProveedores" disable="true" opacity="0.0" source="busquedaProveedores.fxml" />
+   <fx:include fx:id="busquedaClientes" disable="true" opacity="0.0" source="busquedaClientes.fxml" />
+   <fx:include fx:id="busquedaProductos" disable="true" opacity="0.0" source="busquedaProductos.fxml" />
 
    <children>
       <Button fx:id="menuProductos" contentDisplay="CENTER" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="128.0" prefWidth="425.0" text="Productos" />
