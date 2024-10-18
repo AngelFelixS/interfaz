@@ -21,7 +21,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button layoutX="65.0" layoutY="548.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
+        <Button fx:id="volver" onAction="#onClickVolver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
         <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
         <Button layoutX="297.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="309.0" text="Consulta" />
         <Button layoutX="606.0" layoutY="373.0" mnemonicParsing="false" text="Modificar" />
