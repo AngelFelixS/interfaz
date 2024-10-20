@@ -1,9 +1,13 @@
 package com.interfaz.interfaz;
 
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.util.Duration;
 
 public class ControladorPrincipal {
     @FXML
@@ -36,7 +40,8 @@ public class ControladorPrincipal {
     private Button menuClientes1;
     @FXML
     private Button menuClientes2;
-
+    @FXML
+    private VBox mensajeConfirmar;
     private boolean yaHayInterfaz=false;
 
     @FXML
@@ -128,5 +133,13 @@ public class ControladorPrincipal {
         Button botonPulsado=(Button) event.getSource();
         botonPulsado.getParent().setOpacity(0);
         botonPulsado.getParent().setDisable(true);
+    }
+    @FXML
+    private void onConfirmarClick(ActionEvent event) {
+        Label mensajeLabel = new Label("Cliente dado de alta con éxito");
+        mensajeConfirmar.getChildren().add(mensajeLabel);
+        PauseTransition pause = new PauseTransition(Duration.seconds(3));
+        pause.setOnFinished(e -> mensajeConfirmar.getChildren().remove(mensajeLabel));
+        pause.play();
     }
 }

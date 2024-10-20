@@ -13,14 +13,14 @@
         <Button fx:id="menuProductos2" disable="true" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
         <Button fx:id="menuClientes2" disable="true" layoutX="425.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
         <Button fx:id="menuProveedores2" disable="true" layoutX="850.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Búsqueda" />
-
+        <VBox fx:id="mensajeConfirmar" layoutX="850.0" layoutY="400.0" prefHeight="200.0" prefWidth="400.0" spacing="10.0" />
         <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="195.0" text="Dar de alta cliente" textAlignment="CENTER">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
         <Button fx:id="volver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" onAction="#onClickVolver" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
-        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
+        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" onAction="#onConfirmarClick" />
         <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="401.0" style="-fx-background-color: grey;">
             <children>
                 <Label layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="116.0" text="Nombre del cliente" />
