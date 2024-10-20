@@ -4,9 +4,13 @@ import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 public class ControladorCliente extends ControladorPrincipal {
+    @FXML
+    private VBox mensajeConfirmar;
+
     @FXML
     private void onConfirmarClick(ActionEvent event) {
         Label mensajeLabel = new Label("Cliente dado de alta con éxito");
