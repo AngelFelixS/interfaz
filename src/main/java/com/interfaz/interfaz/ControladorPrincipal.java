@@ -41,7 +41,7 @@ public class ControladorPrincipal {
     @FXML
     private Button menuClientes2;
     @FXML
-    private VBox mensajeConfirmar;
+    protected VBox mensajeConfirmar;
     private boolean yaHayInterfaz=false;
 
     @FXML
@@ -133,13 +133,6 @@ public class ControladorPrincipal {
         Button botonPulsado=(Button) event.getSource();
         botonPulsado.getParent().setOpacity(0);
         botonPulsado.getParent().setDisable(true);
-    }
-    @FXML
-    private void onConfirmarClick(ActionEvent event) {
-        Label mensajeLabel = new Label("Cliente dado de alta con éxito");
-        mensajeConfirmar.getChildren().add(mensajeLabel);
-        PauseTransition pause = new PauseTransition(Duration.seconds(3));
-        pause.setOnFinished(e -> mensajeConfirmar.getChildren().remove(mensajeLabel));
-        pause.play();
+        yaHayInterfaz=false;
     }
 }
