@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorProducto">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#inicializar" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorProducto">
     <children>
         <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="195.0" text="Dar de alta producto" textAlignment="CENTER">
          <font>
@@ -14,10 +14,9 @@
          </font>
       </Label>
       <Button fx:id="volver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" onAction="#onClickVolver" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
-      <Button fx:id="confirmar" layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
+      <Button fx:id="confirmar" layoutX="995.0" layoutY="555.0" mnemonicParsing="false" onAction="#onConfirmarAltaClick" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
       <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="346.0" style="-fx-background-color: grey;">
          <children>
-            <ChoiceBox layoutX="90.0" layoutY="72.0" prefWidth="150.0" />
             <Group id="toggleGroup" layoutX="109.0" layoutY="125.0">
                <children>
                   <RadioButton mnemonicParsing="false" text="Procedencia Europea">
@@ -32,11 +31,16 @@
             <DatePicker fx:id="date" layoutX="6.0" layoutY="232.0" prefHeight="17.0" prefWidth="338.0" promptText="Fecha de producción" />
             <TextArea fx:id="textArea" layoutX="76.0" layoutY="273.0" prefHeight="128.0" prefWidth="195.0" promptText="Descripción de producto" />
             <RadioButton fx:id="radio" layoutX="109.0" layoutY="153.0" mnemonicParsing="false" text="Procedencia Extranjera" toggleGroup="$toggleGroup" />
+            <ComboBox fx:id="combo" layoutX="90.0" layoutY="72.0" prefWidth="150.0" />
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </Pane>
+        <VBox fx:id="mensajeConfirmar" alignment="CENTER" disable="true" layoutX="404.0" layoutY="311.0" opacity="0.0" prefHeight="200.0" prefWidth="400.0" spacing="10.0" style="-fx-background-color: grey;">
+         <children>
+            <Label style="-fx-text-fill: blue;" text="Producto dado de alta con éxito, redirigiendo al menu..." />
+         </children></VBox>
         
 
     </children>

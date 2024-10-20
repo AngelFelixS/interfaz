@@ -1,12 +1,15 @@
 package com.interfaz.interfaz;
 
 import javafx.animation.PauseTransition;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Duration;
 
 public class ControladorProducto extends ControladorPrincipal{
+    @FXML
+    private ComboBox combo;
     @FXML
     private CheckBox checkBox;
     @FXML
@@ -19,12 +22,19 @@ public class ControladorProducto extends ControladorPrincipal{
     private TextArea textArea;
 
     @FXML
-    protected void onConfirmarClick(ActionEvent event) {
-        Label mensajeLabel = new Label("Cliente dado de alta con éxito");
-        mensajeConfirmar.getChildren().add(mensajeLabel);
+    protected void inicializar(){
+        String[] opciones = {"a","b"};
+        combo.setPromptText("aaaaaaaaaaa");
+        combo.setItems(FXCollections.observableArrayList(opciones));
+    }
+    @FXML
+    protected void onConfirmarAltaClick(ActionEvent event) {
+        mensajeConfirmar.setOpacity(1);
+        mensajeConfirmar.setDisable(false);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
-            mensajeConfirmar.getChildren().remove(mensajeLabel);
+            mensajeConfirmar.setOpacity(0);
+            mensajeConfirmar.setDisable(true);
             mensajeConfirmar.getParent().setOpacity(0);
             mensajeConfirmar.getParent().setDisable(true);
         });
