@@ -39,6 +39,8 @@ public class ControladorPrincipal {
     private Button menuClientes2;
     @FXML
     protected VBox mensajeConfirmar;
+    @FXML
+    protected Pane paneActivo;
     private boolean yaHayInterfaz=false;
 
     @FXML
@@ -97,31 +99,40 @@ public class ControladorPrincipal {
                 case "menuProductos1" -> {
                     altaProductos.setOpacity(1);
                     altaProductos.setDisable(false);
+                    paneActivo=altaProductos;
                 }
                 case "menuProductos2" -> {
                     busquedaProductos.setOpacity(1);
                     busquedaProductos.setDisable(false);
+                    paneActivo=busquedaProductos;
                 }
                 case "menuClientes1" -> {
                     altaClientes.setOpacity(1);
                     altaClientes.setDisable(false);
+                    paneActivo=altaClientes;
                 }
                 case "menuClientes2" -> {
                     busquedaClientes.setOpacity(1);
                     busquedaClientes.setDisable(false);
+                    paneActivo=busquedaClientes;
                 }
                 case "menuProveedores1" -> {
                     altaProveedores.setOpacity(1);
                     altaProveedores.setDisable(false);
+                    paneActivo=altaProveedores;
                 }
                 case "menuProveedores2" -> {
                     busquedaProveedores.setOpacity(1);
                     busquedaProveedores.setDisable(false);
+                    paneActivo=busquedaProveedores;
                 }
             }
             yaHayInterfaz=true;
         } else {
-
+            paneActivo.setOpacity(0);
+            paneActivo.setDisable(true);
+            yaHayInterfaz=false;
+            onClickOpcion(event);
         }
     }
 

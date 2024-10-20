@@ -12,8 +12,12 @@ public class ControladorCliente extends ControladorPrincipal {
     protected void onConfirmarClick(ActionEvent event) {
         Label mensajeLabel = new Label("Cliente dado de alta con éxito");
         mensajeConfirmar.getChildren().add(mensajeLabel);
-        PauseTransition pause = new PauseTransition(Duration.seconds(3));
-        pause.setOnFinished(e -> mensajeConfirmar.getChildren().remove(mensajeLabel));
+        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+        pause.setOnFinished(e -> {
+            mensajeConfirmar.getChildren().remove(mensajeLabel);
+            mensajeConfirmar.getParent().setOpacity(0);
+            mensajeConfirmar.getParent().setDisable(true);
+        });
         pause.play();
     }
 }
