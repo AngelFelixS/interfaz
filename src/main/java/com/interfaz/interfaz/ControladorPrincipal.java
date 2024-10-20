@@ -2,16 +2,10 @@ package com.interfaz.interfaz;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import javafx.stage.Window;
 
-import java.io.IOException;
-
-public class HelloController {
+public class ControladorPrincipal {
     @FXML
     private Pane altaClientes;
     @FXML
@@ -42,6 +36,8 @@ public class HelloController {
     private Button menuClientes1;
     @FXML
     private Button menuClientes2;
+
+    private boolean yaHayInterfaz=false;
 
     @FXML
     protected void onMenuClick(ActionEvent event) {
@@ -94,31 +90,36 @@ public class HelloController {
     protected void onClickOpcion(ActionEvent event){
         String src=event.getSource().toString();
         String id=src.split("=")[1].split(",")[0];
-        switch (id){
-            case "menuProductos1"->{
-                altaProductos.setOpacity(1);
-                altaProductos.setDisable(false);
+        if (!yaHayInterfaz) {
+            switch (id) {
+                case "menuProductos1" -> {
+                    altaProductos.setOpacity(1);
+                    altaProductos.setDisable(false);
+                }
+                case "menuProductos2" -> {
+                    busquedaProductos.setOpacity(1);
+                    busquedaProductos.setDisable(false);
+                }
+                case "menuClientes1" -> {
+                    altaClientes.setOpacity(1);
+                    altaClientes.setDisable(false);
+                }
+                case "menuClientes2" -> {
+                    busquedaClientes.setOpacity(1);
+                    busquedaClientes.setDisable(false);
+                }
+                case "menuProveedores1" -> {
+                    altaProveedores.setOpacity(1);
+                    altaProveedores.setDisable(false);
+                }
+                case "menuProveedores2" -> {
+                    busquedaProveedores.setOpacity(1);
+                    busquedaProveedores.setDisable(false);
+                }
             }
-            case "menuProductos2"->{
-                busquedaProductos.setOpacity(1);
-                busquedaProductos.setDisable(false);
-            }
-            case "menuClientes1"->{
-                altaClientes.setOpacity(1);
-                altaClientes.setDisable(false);
-            }
-            case "menuClientes2"->{
-                busquedaClientes.setOpacity(1);
-                busquedaClientes.setDisable(false);
-            }
-            case "menuProveedores1"->{
-                altaProveedores.setOpacity(1);
-                altaProveedores.setDisable(false);
-            }
-            case "menuProveedores2"->{
-                busquedaProveedores.setOpacity(1);
-                busquedaProveedores.setDisable(false);
-            }
+            yaHayInterfaz=true;
+        } else {
+
         }
     }
 
