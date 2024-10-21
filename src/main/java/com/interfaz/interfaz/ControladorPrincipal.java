@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-public class ControladorPrincipal {
+public class   ControladorPrincipal {
     @FXML
     private Pane altaClientes;
     @FXML

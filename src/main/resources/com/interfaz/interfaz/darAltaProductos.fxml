@@ -15,28 +15,31 @@
       </Label>
       <Button fx:id="volver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" onAction="#onClickVolver" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
       <Button fx:id="confirmar" layoutX="995.0" layoutY="555.0" mnemonicParsing="false" onAction="#onConfirmarAltaClick" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
-      <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="346.0" style="-fx-background-color: grey;">
-         <children>
-            <Group id="toggleGroup" layoutX="109.0" layoutY="125.0">
-               <children>
-                  <RadioButton mnemonicParsing="false" text="Procedencia Europea">
-                     <toggleGroup>
+        <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="346.0" style="-fx-background-color: grey;">
+            <children>
+                <Group id="toggleGroup" layoutX="109.0" layoutY="125.0" />
+                <CheckBox fx:id="checkBox" layoutX="216.0" layoutY="95.0" mnemonicParsing="false" text="IVA Incluido" />
+                <TextField fx:id="text" layoutX="6.0" layoutY="30.0" prefHeight="17.0" prefWidth="338.0" promptText="Nombre del producto" />
+                <DatePicker fx:id="date" layoutX="4.0" layoutY="213.0" prefHeight="17.0" prefWidth="338.0" promptText="Fecha de producción" />
+                <TextArea fx:id="textArea" layoutX="11.0" layoutY="284.0" prefHeight="128.0" prefWidth="195.0" promptText="Descripción de producto" />
+                <RadioButton fx:id="radio" layoutX="5.0" layoutY="163.0" mnemonicParsing="false" text="Procedencia Extranjera">
+                    <toggleGroup>
                         <ToggleGroup fx:id="toggleGroup" />
-                     </toggleGroup>
-                  </RadioButton>
-               </children>
-            </Group>
-            <CheckBox fx:id="checkBox" layoutX="123.0" layoutY="186.0" mnemonicParsing="false" text="IVA Incluido" />
-            <TextField fx:id="text" layoutX="6.0" layoutY="30.0" prefHeight="17.0" prefWidth="338.0" promptText="Nombre del producto" />
-            <DatePicker fx:id="date" layoutX="6.0" layoutY="232.0" prefHeight="17.0" prefWidth="338.0" promptText="Fecha de producción" />
-            <TextArea fx:id="textArea" layoutX="76.0" layoutY="273.0" prefHeight="128.0" prefWidth="195.0" promptText="Descripción de producto" />
-            <RadioButton fx:id="radio" layoutX="109.0" layoutY="153.0" mnemonicParsing="false" text="Procedencia Extranjera" toggleGroup="$toggleGroup" />
-            <ComboBox fx:id="combo" layoutX="90.0" layoutY="72.0" prefWidth="150.0" />
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Pane>
+                    </toggleGroup></RadioButton>
+                <ComboBox fx:id="combo" layoutX="1.0" layoutY="91.0" prefWidth="150.0" />
+                <Label layoutX="14.0" layoutY="6.0" text="Nombre del producto" />
+                <Label layoutX="6.0" layoutY="74.0" text="Tipo de producto" />
+                <RadioButton layoutX="175.0" layoutY="163.0" mnemonicParsing="false" text="Procedencia Europea" toggleGroup="$toggleGroup" />
+                <Label layoutX="129.0" layoutY="125.0" text="Procedencia" />
+                <Label layoutX="5.0" layoutY="196.0" text="Fecha de producción" />
+                <Label layoutX="11.0" layoutY="254.0" text="Descrpción del producto" />
+                <Button layoutX="294.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="MOD" />
+                <Button layoutX="294.0" layoutY="383.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Baja" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Pane>
         <VBox fx:id="mensajeConfirmar" alignment="CENTER" disable="true" layoutX="404.0" layoutY="311.0" opacity="0.0" prefHeight="200.0" prefWidth="400.0" spacing="10.0" style="-fx-background-color: grey;">
          <children>
             <Label style="-fx-text-fill: blue;" text="Producto dado de alta con éxito, redirigiendo al menu..." />
