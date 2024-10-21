@@ -10,6 +10,16 @@ public class Cliente {
     private boolean jubilado;
     private String datosExtra;
 
+    public Cliente(String nombre, String dni, String empleado, boolean sexo, String correoElectronico, String fechaNacimiento, boolean jubilado, String datosExtra) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.empleado = empleado;
+        this.sexo = sexo;
+        this.correoElectronico = correoElectronico;
+        this.fechaNacimiento = fechaNacimiento;
+        this.jubilado = jubilado;
+        this.datosExtra = datosExtra;
+    }
 
     public String getNombre() {
         return nombre;

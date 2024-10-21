@@ -8,6 +8,16 @@ public class Proveedor {
     private String fechaCreacionEmpresa;
     private String datosExtra;
 
+
+    public Proveedor(String nombreEmpresa, String sector, boolean tipoEmpresa, boolean tasaTransporte, String fechaCreacionEmpresa, String datosExtra) {
+        this.nombreEmpresa = nombreEmpresa;
+        this.sector = sector;
+        this.tipoEmpresa = tipoEmpresa;
+        this.tasaTransporte = tasaTransporte;
+        this.fechaCreacionEmpresa = fechaCreacionEmpresa;
+        this.datosExtra = datosExtra;
+    }
+
     public String getNombreEmpresa() {
         return nombreEmpresa;
     }
