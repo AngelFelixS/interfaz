@@ -26,7 +26,7 @@
       <Button fx:id="menuProveedores2" disable="true" layoutX="850.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Búsqueda" />
       <ImageView fx:id="logo" fitWidth="400" preserveRatio="true">
          <image>
-            <Image url="@src/main/resources/Imagenes/logo.jpg"/>
+            <Image url="https://lh6.googleusercontent.com/proxy/GQp0YkHF6dhyyibfDPLUrbn3AZvXeKA3hXb41uddNgN6MBcTEKVlzgFmnJeH0aMGK77ly_a2p-VL24R2sVaxm7uUot0JSlgyE6h2BzX73tAUVXSl4OTwvq5V9VC9k7BJjH4LXnRAvJl8"/>
          </image>
       </ImageView>
    </children>

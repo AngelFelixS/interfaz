@@ -20,4 +20,9 @@ public class ControladorCliente extends ControladorPrincipal {
         });
         pause.play();
     }
+
+    @FXML
+    protected void onBuscar(){
+
+    }
 }

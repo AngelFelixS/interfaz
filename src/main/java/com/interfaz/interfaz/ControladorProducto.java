@@ -43,7 +43,7 @@ public class ControladorProducto extends ControladorPrincipal{
 
     @FXML
     protected void onBuscar(){
-        Producto p=new Producto(nombre.getText(),);
+        Producto p=null;
         HelloApplication.getModelo().busquedaDatos(p);
     }
 }
