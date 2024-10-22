@@ -36,11 +36,11 @@ public class Modelo {
 
     public void darBaja(Object o) {
         if (o instanceof Cliente){
-            listaClientes.remove(o);
+            listaClientes.remove((Cliente) o);
         } else if (o instanceof Proveedor) {
-            listaProveedor.remove(o);
+            listaProveedor.remove((Proveedor) o);
         } else if (o instanceof Producto) {
-            listaProductos.remove(o);
+            listaProductos.remove((Producto) o);
         }
     }
 
