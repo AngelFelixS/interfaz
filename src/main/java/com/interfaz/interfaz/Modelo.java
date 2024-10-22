@@ -8,9 +8,9 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Modelo {
-    private ArrayList listaClientes;
-    private ArrayList listaProductos;
-    private ArrayList listaProveedor;
+    private ArrayList<Cliente> listaClientes;
+    private ArrayList<Producto> listaProductos;
+    private ArrayList<Proveedor> listaProveedor;
 
     public Modelo() {
         listaClientes = new ArrayList<>();
@@ -20,11 +20,11 @@ public class Modelo {
 
     public void darAlta(Object o) {
         if (o instanceof Cliente){
-            listaClientes.add(o);
+            listaClientes.add((Cliente) o);
         } else if (o instanceof Proveedor) {
-            listaProveedor.add(o);
+            listaProveedor.add((Proveedor) o);
         } else if (o instanceof Producto) {
-            listaProductos.add(o);
+            listaProductos.add((Producto) o);
         }
     }
 
@@ -40,21 +40,21 @@ public class Modelo {
 
     public void darBaja(Object o) {
         if (o instanceof Cliente){
-            listaClientes.remove(o);
+            listaClientes.remove((Cliente) o);
         } else if (o instanceof Proveedor) {
-            listaProveedor.remove(o);
+            listaProveedor.remove((Proveedor) o);
         } else if (o instanceof Producto) {
-            listaProductos.remove(o);
+            listaProductos.remove((Producto) o);
         }
     }
 
 
-    public void modificarDatos(Object o){
-        if (o instanceof Cliente){
+    public void modificarDatos(Object viejo, Object nuevo){
+        if (viejo instanceof Cliente){
 
-        } else if (o instanceof Proveedor) {
+        } else if (viejo instanceof Proveedor) {
 
-        } else if (o instanceof Producto) {
+        } else if (viejo instanceof Producto) {
 
         }
     }
