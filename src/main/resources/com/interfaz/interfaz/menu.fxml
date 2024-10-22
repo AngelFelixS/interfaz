@@ -6,28 +6,40 @@
 <!--CAMBIAR LO DEL CONTROLADOR QUE NO LO TENGA POR DEFECTO-->
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorPrincipal">
-   <fx:include fx:id="altaClientes" disable="true" opacity="0.0" source="darAltaClientes.fxml" />
-   <fx:include fx:id="altaProductos" disable="true" opacity="0.0" source="darAltaProductos.fxml" />
-   <fx:include fx:id="altaProveedores" disable="true" opacity="0.0" source="darAltaProveedor.fxml" />
-   <fx:include fx:id="busquedaProveedores" disable="true" opacity="0.0" source="busquedaProveedores.fxml" />
-   <fx:include fx:id="busquedaClientes" disable="true" opacity="0.0" source="busquedaClientes.fxml" />
-   <fx:include fx:id="busquedaProductos" disable="true" opacity="0.0" source="busquedaProductos.fxml" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+      prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.interfaz.interfaz.ControladorPrincipal">
+    <fx:include fx:id="altaClientes" disable="true" opacity="0.0" source="darAltaClientes.fxml"/>
+    <fx:include fx:id="altaProductos" disable="true" opacity="0.0" source="darAltaProductos.fxml"/>
+    <fx:include fx:id="altaProveedores" disable="true" opacity="0.0" source="darAltaProveedor.fxml"/>
+    <fx:include fx:id="busquedaProveedores" disable="true" opacity="0.0" source="busquedaProveedores.fxml"/>
+    <fx:include fx:id="busquedaClientes" disable="true" opacity="0.0" source="busquedaClientes.fxml"/>
+    <fx:include fx:id="busquedaProductos" disable="true" opacity="0.0" source="busquedaProductos.fxml"/>
 
-   <children>
-      <Button fx:id="menuProductos" contentDisplay="CENTER" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="128.0" prefWidth="425.0" text="Productos" />
-      <Button fx:id="menuClientes" layoutX="425.0" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="128.0" prefWidth="425.0" text="Clientes" />
-      <Button fx:id="menuProveedores" layoutX="850.0" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="128.0" prefWidth="431.0" text="Proveedores" />
-      <Button fx:id="menuProductos1" disable="true" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de alta" />
-      <Button fx:id="menuClientes1" disable="true" layoutX="425.0" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de Alta" />
-      <Button fx:id="menuProveedores1" disable="true" layoutX="850.0" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Dar de Alta" />
-      <Button fx:id="menuProductos2" disable="true" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
-      <Button fx:id="menuClientes2" disable="true" layoutX="425.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda" />
-      <Button fx:id="menuProveedores2" disable="true" layoutX="850.0" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Búsqueda" />
-      <ImageView fx:id="logo" fitWidth="400" preserveRatio="true">
-         <image>
-            <Image url="https://lh6.googleusercontent.com/proxy/GQp0YkHF6dhyyibfDPLUrbn3AZvXeKA3hXb41uddNgN6MBcTEKVlzgFmnJeH0aMGK77ly_a2p-VL24R2sVaxm7uUot0JSlgyE6h2BzX73tAUVXSl4OTwvq5V9VC9k7BJjH4LXnRAvJl8"/>
-         </image>
-      </ImageView>
-   </children>
+    <children>
+        <ImageView fx:id="logo" fitWidth="400" preserveRatio="true" layoutX="425" layoutY="200">
+            <image>
+                <Image url="https://lh6.googleusercontent.com/proxy/GQp0YkHF6dhyyibfDPLUrbn3AZvXeKA3hXb41uddNgN6MBcTEKVlzgFmnJeH0aMGK77ly_a2p-VL24R2sVaxm7uUot0JSlgyE6h2BzX73tAUVXSl4OTwvq5V9VC9k7BJjH4LXnRAvJl8"/>
+            </image>
+        </ImageView>
+        <Button fx:id="menuProductos" contentDisplay="CENTER" layoutY="1.0" mnemonicParsing="false"
+                onAction="#onMenuClick" prefHeight="128.0" prefWidth="425.0" text="Productos"/>
+        <Button fx:id="menuClientes" layoutX="425.0" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick"
+                prefHeight="128.0" prefWidth="425.0" text="Clientes"/>
+        <Button fx:id="menuProveedores" layoutX="850.0" layoutY="1.0" mnemonicParsing="false" onAction="#onMenuClick"
+                prefHeight="128.0" prefWidth="431.0" text="Proveedores"/>
+        <Button fx:id="menuProductos1" disable="true" layoutY="129.0" mnemonicParsing="false" onAction="#onClickOpcion"
+                opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de alta"/>
+        <Button fx:id="menuClientes1" disable="true" layoutX="425.0" layoutY="129.0" mnemonicParsing="false"
+                onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Dar de Alta"/>
+        <Button fx:id="menuProveedores1" disable="true" layoutX="850.0" layoutY="129.0" mnemonicParsing="false"
+                onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Dar de Alta"/>
+        <Button fx:id="menuProductos2" disable="true" layoutY="257.0" mnemonicParsing="false" onAction="#onClickOpcion"
+                opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda"/>
+        <Button fx:id="menuClientes2" disable="true" layoutX="425.0" layoutY="257.0" mnemonicParsing="false"
+                onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="425.0" text="Búsqueda"/>
+        <Button fx:id="menuProveedores2" disable="true" layoutX="850.0" layoutY="257.0" mnemonicParsing="false"
+                onAction="#onClickOpcion" opacity="0.0" prefHeight="128.0" prefWidth="431.0" text="Búsqueda"/>
+
+    </children>
 </Pane>
