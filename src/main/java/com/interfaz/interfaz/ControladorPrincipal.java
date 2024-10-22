@@ -143,9 +143,4 @@ public class   ControladorPrincipal {
         botonPulsado.getParent().setDisable(true);
         yaHayInterfaz=false;
     }
-
-    @FXML
-    protected void onBuscar(){
-
-    }
 }

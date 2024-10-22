@@ -19,7 +19,7 @@
             <children>
                 <Group id="toggleGroup" layoutX="109.0" layoutY="125.0" />
                 <CheckBox fx:id="checkBox" layoutX="216.0" layoutY="95.0" mnemonicParsing="false" text="IVA Incluido" />
-                <TextField fx:id="text" layoutX="6.0" layoutY="30.0" prefHeight="17.0" prefWidth="338.0" promptText="Nombre del producto" />
+                <TextField fx:id="nombre" layoutX="6.0" layoutY="30.0" prefHeight="17.0" prefWidth="338.0" promptText="Nombre del producto" />
                 <DatePicker fx:id="date" layoutX="4.0" layoutY="213.0" prefHeight="17.0" prefWidth="338.0" promptText="Fecha de producción" />
                 <TextArea fx:id="textArea" layoutX="11.0" layoutY="284.0" prefHeight="128.0" prefWidth="195.0" promptText="Descripción de producto" />
                 <RadioButton fx:id="radio" layoutX="5.0" layoutY="163.0" mnemonicParsing="false" text="Procedencia Extranjera">

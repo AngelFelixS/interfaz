@@ -15,7 +15,7 @@ public class ControladorProducto extends ControladorPrincipal{
     @FXML
     private RadioButton radio;
     @FXML
-    private TextField text;
+    private TextField nombre;
     @FXML
     private DatePicker date;
     @FXML
@@ -39,5 +39,11 @@ public class ControladorProducto extends ControladorPrincipal{
             mensajeConfirmar.getParent().setDisable(true);
         });
         pause.play();
+    }
+
+    @FXML
+    protected void onBuscar(){
+        Producto p=new Producto(nombre.getText(),);
+        HelloApplication.getModelo().busquedaDatos(p);
     }
 }

@@ -10,10 +10,12 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     private static Stage stage;
+    private static Modelo modelo;
 
     @Override
     public void start(Stage stage) throws IOException {
         this.stage=stage;
+        this.modelo=new Modelo();
         FXMLLoader principalLoader = new FXMLLoader(HelloApplication.class.getResource("menu.fxml"));
         Scene principal = new Scene(principalLoader.load(), 1280, 720);
         stage.setTitle("App");
@@ -32,5 +34,9 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public static Modelo getModelo() {
+        return modelo;
     }
 }
