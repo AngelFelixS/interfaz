@@ -18,6 +18,30 @@ public class Proveedor {
         this.datosExtra = datosExtra;
     }
 
+    public void setNombreEmpresa(String nombreEmpresa) {
+        this.nombreEmpresa = nombreEmpresa;
+    }
+
+    public void setSector(String sector) {
+        this.sector = sector;
+    }
+
+    public void setTipoEmpresa(boolean tipoEmpresa) {
+        this.tipoEmpresa = tipoEmpresa;
+    }
+
+    public void setTasaTransporte(boolean tasaTransporte) {
+        this.tasaTransporte = tasaTransporte;
+    }
+
+    public void setFechaCreacionEmpresa(String fechaCreacionEmpresa) {
+        this.fechaCreacionEmpresa = fechaCreacionEmpresa;
+    }
+
+    public void setDatosExtra(String datosExtra) {
+        this.datosExtra = datosExtra;
+    }
+
     public String getNombreEmpresa() {
         return nombreEmpresa;
     }

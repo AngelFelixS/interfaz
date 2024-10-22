@@ -17,6 +17,30 @@ public class Producto {
         this.descripcionProducto = descripcionProducto;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTipoProducto(String tipoProducto) {
+        this.tipoProducto = tipoProducto;
+    }
+
+    public void setProcedencia(boolean procedencia) {
+        this.procedencia = procedencia;
+    }
+
+    public void setTieneIva(boolean tieneIva) {
+        this.tieneIva = tieneIva;
+    }
+
+    public void setFechaProduccion(String fechaProduccion) {
+        this.fechaProduccion = fechaProduccion;
+    }
+
+    public void setDescripcionProducto(String descripcionProducto) {
+        this.descripcionProducto = descripcionProducto;
+    }
+
     public String getNombre() {
         return nombre;
     }

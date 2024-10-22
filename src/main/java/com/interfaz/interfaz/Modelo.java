@@ -45,7 +45,15 @@ public class Modelo {
     }
 
 
-    public static void modificarDatos(){}
+    public void modificarDatos(Object o){
+        if (o instanceof Cliente){
+
+        } else if (o instanceof Proveedor) {
+
+        } else if (o instanceof Producto) {
+
+        }
+    }
 
 
 }

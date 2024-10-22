@@ -21,6 +21,38 @@ public class Cliente {
         this.datosExtra = datosExtra;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public void setEmpleado(String empleado) {
+        this.empleado = empleado;
+    }
+
+    public void setSexo(boolean sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public void setJubilado(boolean jubilado) {
+        this.jubilado = jubilado;
+    }
+
+    public void setDatosExtra(String datosExtra) {
+        this.datosExtra = datosExtra;
+    }
+
     public String getNombre() {
         return nombre;
     }
