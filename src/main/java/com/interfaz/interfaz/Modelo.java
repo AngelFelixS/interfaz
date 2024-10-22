@@ -8,18 +8,44 @@ public class Modelo {
     public static ArrayList listaProductos;
     public static ArrayList listaProveedor;
 
+    public Modelo() {
+        listaClientes = new ArrayList<>();
+        listaProductos = new ArrayList<>();
+        listaProveedor = new ArrayList<>();
+    }
 
-    public static boolean crearCliente(Cliente c){
+    public static void crearCliente(Cliente c) {
         listaClientes.add(c);
-        return true;
     }
 
-    public static boolean crearProyecto(Producto p){
-        listaClientes.add(p);
-        return true;
+    public static void busquedaClientes(Cliente c) {
     }
-    public static boolean crearProveedor(Proveedor pr){
-        listaClientes.add(pr);
-        return true;
+
+    public static void borrarCliente(Cliente c) {
     }
+
+
+    public static void crearProyecto(Producto p) {
+        listaProductos.add(p);
+    }
+
+    public static void busquedaProducto(Producto p) {
+    }
+
+
+    public static void borrarProducto(Producto p) {
+    }
+
+
+    public static void crearProveedor(Proveedor pr) {
+        listaProveedor.add(pr);
+    }
+
+    public static void busquedaProveedor(Proveedor pr) {
+    }
+
+    public static void borrarProveedor(Proveedor pr) {
+    }
+
+
 }
