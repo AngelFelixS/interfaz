@@ -1,5 +1,9 @@
 package com.interfaz.interfaz;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -54,6 +58,5 @@ public class Modelo {
 
         }
     }
-
 
 }
