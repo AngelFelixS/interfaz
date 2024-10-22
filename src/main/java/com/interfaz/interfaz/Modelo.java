@@ -4,9 +4,9 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Modelo {
-    public static ArrayList listaClientes;
-    public static ArrayList listaProductos;
-    public static ArrayList listaProveedor;
+    private ArrayList listaClientes;
+    private ArrayList listaProductos;
+    private ArrayList listaProveedor;
 
     public Modelo() {
         listaClientes = new ArrayList<>();
@@ -14,7 +14,7 @@ public class Modelo {
         listaProveedor = new ArrayList<>();
     }
 
-    public static void darAlta(Object o) {
+    public void darAlta(Object o) {
         if (o instanceof Cliente){
             listaClientes.add(o);
         } else if (o instanceof Proveedor) {
@@ -24,10 +24,17 @@ public class Modelo {
         }
     }
 
-    public static void busquedaClientes(Cliente c) {
+    public void busquedaDatos(Object o) {
+        if (o instanceof Cliente && listaClientes.contains(o)){
+            System.out.println(o);
+        } else if (o instanceof Proveedor && listaProveedor.contains(o)) {
+            System.out.println(o);
+        } else if (o instanceof Producto && listaProductos.contains(o)) {
+            System.out.println(o);
+        }
     }
 
-    public static void darBaja(Object o) {
+    public void darBaja(Object o) {
         if (o instanceof Cliente){
             listaClientes.remove(o);
         } else if (o instanceof Proveedor) {
@@ -38,12 +45,7 @@ public class Modelo {
     }
 
 
-    public static void busquedaProducto(Producto p) {
-    }
-
-
-    public static void busquedaProveedor(Proveedor pr) {
-    }
+    public static void modificarDatos(){}
 
 
 }
