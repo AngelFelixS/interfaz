@@ -14,37 +14,35 @@ public class Modelo {
         listaProveedor = new ArrayList<>();
     }
 
-    public static void crearCliente(Cliente c) {
-        listaClientes.add(c);
+    public static void darAlta(Object o) {
+        if (o instanceof Cliente){
+            listaClientes.add(o);
+        } else if (o instanceof Proveedor) {
+            listaProveedor.add(o);
+        } else if (o instanceof Producto) {
+            listaProductos.add(o);
+        }
     }
 
     public static void busquedaClientes(Cliente c) {
     }
 
-    public static void borrarCliente(Cliente c) {
+    public static void darBaja(Object o) {
+        if (o instanceof Cliente){
+            listaClientes.remove(o);
+        } else if (o instanceof Proveedor) {
+            listaProveedor.remove(o);
+        } else if (o instanceof Producto) {
+            listaProductos.remove(o);
+        }
     }
 
-
-    public static void crearProyecto(Producto p) {
-        listaProductos.add(p);
-    }
 
     public static void busquedaProducto(Producto p) {
     }
 
 
-    public static void borrarProducto(Producto p) {
-    }
-
-
-    public static void crearProveedor(Proveedor pr) {
-        listaProveedor.add(pr);
-    }
-
     public static void busquedaProveedor(Proveedor pr) {
-    }
-
-    public static void borrarProveedor(Proveedor pr) {
     }
 
 
