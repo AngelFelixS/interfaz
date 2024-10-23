@@ -5,7 +5,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorPrincipal">
+<?import javafx.scene.Group?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#inicializar" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorProveedor">
     <children>
         <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="206.0" text="Dar de alta proveedor" textAlignment="CENTER">
             <font>
@@ -13,15 +14,20 @@
             </font>
         </Label>
         <Button fx:id="volver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" onAction="#onClickVolver" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
-        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
+        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" onAction="#onConfirmarAltaClick" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
         <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="401.0" style="-fx-background-color: grey;">
             <children>
+                <Group id="toggleGroup" layoutX="109.0" layoutY="125.0" />
                 <Label layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="133.0" text="Nombre de la empresa" />
-                <TextField fx:id="nombre" layoutY="28.0" prefHeight="25.0" prefWidth="172.0" promptText="Nombre de la empresa" />
-                <ChoiceBox layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
-                <RadioButton layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="SA" />
-                <RadioButton layoutX="215.0" layoutY="93.0" mnemonicParsing="false" text="SL" />
-                <CheckBox layoutX="227.0" layoutY="191.0" mnemonicParsing="false" text="Tasa de transporte" />
+                <TextField fx:id="nombreEmpresa" layoutY="28.0" prefHeight="25.0" prefWidth="172.0" promptText="Nombre de la empresa" />
+                <ChoiceBox fx:id="sectorProv" layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
+                <RadioButton fx:id="SA" layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="SA"  >
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton layoutX="215.0" layoutY="93.0" mnemonicParsing="false" text="SL" toggleGroup="$toggleGroup"/>
+                <CheckBox fx:id="tasaTrasnporte" layoutX="227.0" layoutY="191.0" mnemonicParsing="false" text="Tasa de transporte" />
                 <Label layoutX="4.0" layoutY="253.0" prefHeight="25.0" prefWidth="121.0" text="Datos Extra pedido" />
                 <TextField fx:id="datosExtra" layoutX="11.0" layoutY="278.0" prefHeight="124.0" prefWidth="172.0" promptText="Datos Extra" />
                 <Label layoutX="220.0" layoutY="6.0" prefHeight="17.0" prefWidth="150.0" text="NIF" />
@@ -35,7 +41,10 @@
                 <Insets />
             </opaqueInsets>
         </Pane>
-
+        <VBox fx:id="mensajeConfirmar" alignment="CENTER" disable="true" layoutX="404.0" layoutY="311.0" opacity="0.0" prefHeight="200.0" prefWidth="400.0" spacing="10.0" style="-fx-background-color: grey;">
+            <children>
+                <Label style="-fx-text-fill: blue;" text="Proveedor dado de alta con éxito, redirigiendo al menu..." />
+            </children></VBox>
 
     </children>
 
