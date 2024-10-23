@@ -20,7 +20,7 @@
                 <Group id="toggleGroup" layoutX="109.0" layoutY="125.0" />
                 <Label layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="133.0" text="Nombre de la empresa" />
                 <TextField fx:id="nombreEmpresa" layoutY="28.0" prefHeight="25.0" prefWidth="172.0" promptText="Nombre de la empresa" />
-                <ChoiceBox fx:id="sectorProv" layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
+                <ComboBox fx:id="sectorProv" layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
                 <RadioButton fx:id="SA" layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="SA"  >
                     <toggleGroup>
                         <ToggleGroup fx:id="toggleGroup" />

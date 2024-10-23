@@ -15,7 +15,7 @@ public class ControladorProveedor extends ControladorPrincipal{
     @FXML
     private RadioButton SA ;
     @FXML
-    private ChoiceBox sectorProv;
+    private ComboBox sectorProv;
     @FXML
     private TextField NIF ;
     @FXML
