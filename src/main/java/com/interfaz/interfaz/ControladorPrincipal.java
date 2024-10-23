@@ -99,8 +99,6 @@ public class   ControladorPrincipal {
     protected void onClickOpcion(ActionEvent event){
         String src=event.getSource().toString();
         String id=src.split("=")[1].split(",")[0];
-        logo.setOpacity(0);
-        logo.setDisable(true);
         if (!yaHayInterfaz) {
             switch (id) {
                 case "menuProductos1" -> {

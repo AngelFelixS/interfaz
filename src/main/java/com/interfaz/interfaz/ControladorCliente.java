@@ -1,12 +1,21 @@
 package com.interfaz.interfaz;
 
 import javafx.animation.PauseTransition;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
 public class ControladorCliente extends ControladorPrincipal {
+    @FXML
+    private ComboBox esEmpleado;
+    @FXML
+    protected void inicializar(){
+        String[] opciones = {"Si","No"};
+        esEmpleado.setItems(FXCollections.observableArrayList(opciones));
+    }
 
     @FXML
     protected void onConfirmarClick(ActionEvent event) {
@@ -23,6 +32,7 @@ public class ControladorCliente extends ControladorPrincipal {
 
     @FXML
     protected void onBuscar(){
-
+        Cliente c=null;
+        HelloApplication.getModelo().busquedaDatos(c);
     }
 }
