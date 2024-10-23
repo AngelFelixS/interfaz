@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Duration;
 
+
+
 public class ControladorProveedor extends ControladorPrincipal{
     @FXML
     private CheckBox tasaTrasnporte;
@@ -39,6 +41,8 @@ public class ControladorProveedor extends ControladorPrincipal{
     protected void onConfirmarAltaClick(ActionEvent event) {
         mensajeConfirmar.setOpacity(1);
         mensajeConfirmar.setDisable(false);
+        Proveedor pr = new Proveedor(nombreEmpresa.getText(),(String) sectorProv.getValue(), SA.isSelected(), tasaTrasnporte.isSelected(), (date.getValue() != null) ? date.getValue().toString() : "", datosExtra.getText());
+        HelloApplication.getModelo().darAlta(pr);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
             mensajeConfirmar.setOpacity(0);
