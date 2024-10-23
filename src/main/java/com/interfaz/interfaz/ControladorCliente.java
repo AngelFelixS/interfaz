@@ -25,7 +25,7 @@ public class ControladorCliente extends ControladorPrincipal {
     @FXML
     private DatePicker fechaNacimiento;
     @FXML
-    private TextArea datosExtra;
+    private TextField datos;
     @FXML
     protected void inicializar(){
         String[] opciones = {"Si","No"};
@@ -34,13 +34,14 @@ public class ControladorCliente extends ControladorPrincipal {
 
     @FXML
     protected void onConfirmarClick(ActionEvent event) {
-        Label mensajeLabel = new Label("Cliente dado de alta con éxito");
-        mensajeConfirmar.getChildren().add(mensajeLabel);
-        Cliente c=new Cliente(nombre.getText(),dni.getText(),esEmpleado.getValue().toString(),hombre.isSelected(), correoElectronico.getText(),fechaNacimiento.getValue().toString(),jubilado.isSelected(),datosExtra.getText());
+        mensajeConfirmar.setOpacity(1);
+        mensajeConfirmar.setDisable(false);
+        Cliente c=new Cliente(nombre.getText(),dni.getText(),esEmpleado.getValue().toString(),hombre.isSelected(), correoElectronico.getText(),fechaNacimiento.getValue().toString(),jubilado.isSelected(),datos.getText());
         HelloApplication.getModelo().darAlta(c);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
-            mensajeConfirmar.getChildren().remove(mensajeLabel);
+            mensajeConfirmar.setOpacity(0);
+            mensajeConfirmar.setDisable(true);
             mensajeConfirmar.getParent().setOpacity(0);
             mensajeConfirmar.getParent().setDisable(true);
         });
@@ -49,7 +50,6 @@ public class ControladorCliente extends ControladorPrincipal {
 
     @FXML
     protected void onBuscar(){
-        Cliente c=null;
-        HelloApplication.getModelo().busquedaDatos(c);
+        Cliente c=new Cliente(nombre.getText(),dni.getText(),esEmpleado.getValue().toString(),hombre.isSelected(), correoElectronico.getText(),fechaNacimiento.getValue().toString(),jubilado.isSelected(),datos.getText());
     }
 }

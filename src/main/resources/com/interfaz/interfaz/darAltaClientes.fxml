@@ -21,24 +21,24 @@
                 <Group id="sexoCliente" layoutX="109.0" layoutY="125.0" />
                 <Label layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="116.0" text="Nombre del cliente" />
                 <ComboBox fx:id="esEmpleado" layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
-                <RadioButton layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="Mujer">
+                <RadioButton fx:id="mujer" layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="Mujer">
                     <toggleGroup>
                         <ToggleGroup fx:id="sexoCliente" />
                     </toggleGroup>
                 </RadioButton>
-                <RadioButton layoutX="200.0" layoutY="92.0" mnemonicParsing="false" text="Hombre" toggleGroup="$sexoCliente" />
-                <CheckBox layoutX="10.0" layoutY="253.0" mnemonicParsing="false" text="Jubilado" />
+                <RadioButton fx:id="hombre" layoutX="200.0" layoutY="92.0" mnemonicParsing="false" text="Hombre" toggleGroup="$sexoCliente" />
+                <CheckBox fx:id="jubilado" layoutX="10.0" layoutY="253.0" mnemonicParsing="false" text="Jubilado" />
                 <Label layoutY="169.0" prefHeight="17.0" prefWidth="109.0" text="Correo Electrónico" />
                 <Label layoutX="232.0" layoutY="249.0" prefHeight="25.0" prefWidth="92.0" text="Datos Extra" />
-                <TextField layoutX="6.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" promptText="Introduzca el nombre" style="-fx-background-color: white;" />
+                <TextField fx:id="nombre" layoutX="6.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" promptText="Introduzca el nombre" style="-fx-background-color: white;" />
                 <Label layoutX="6.0" layoutY="65.0" prefHeight="17.0" prefWidth="75.0" text="Empleado" />
                 <Label layoutX="261.0" layoutY="65.0" prefHeight="17.0" prefWidth="40.0" text="Sexo" />
-                <TextField layoutX="6.0" layoutY="196.0" prefHeight="17.0" prefWidth="133.0" promptText="Introduzca el correo electronico" style="-fx-background-color: white;" />
+                <TextField fx:id="correoElectronico" layoutX="6.0" layoutY="196.0" prefHeight="17.0" prefWidth="133.0" promptText="Introduzca el correo electronico" style="-fx-background-color: white;" />
                 <Label layoutX="232.0" layoutY="169.0" text="Fecha de Nacimiento" />
-                <DatePicker layoutX="232.0" layoutY="196.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
-                <TextField layoutX="232.0" layoutY="285.0" prefHeight="128.0" prefWidth="144.0" promptText="Introduzca posibles datos adicionales" style="-fx-background-color: white;" />
+                <DatePicker fx:id="fechaNacimiento" layoutX="232.0" layoutY="196.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
+                <TextField fx:id="datos" layoutX="232.0" layoutY="285.0" prefHeight="128.0" prefWidth="144.0" promptText="Introduzca posibles datos adicionales" style="-fx-background-color: white;" />
                 <Label layoutX="232.0" layoutY="6.0" prefHeight="17.0" prefWidth="40.0" text="DNI" />
-                <TextField layoutX="229.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" promptText="DNI" style="-fx-background-color: white;" />
+                <TextField fx:id="dni" layoutX="229.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" promptText="DNI" style="-fx-background-color: white;" />
 
             </children>
             <opaqueInsets>
