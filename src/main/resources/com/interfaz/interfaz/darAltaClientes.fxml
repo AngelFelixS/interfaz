@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorCliente">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#inicializar" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorCliente">
     <children>
         <VBox fx:id="mensajeConfirmar" layoutX="850.0" layoutY="400.0" prefHeight="200.0" prefWidth="400.0" spacing="10.0" />
         <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="195.0" text="Dar de alta cliente" textAlignment="CENTER">
@@ -14,23 +15,27 @@
             </font>
         </Label>
         <Button fx:id="volver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" onAction="#onClickVolver" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
-        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" onAction="#onConfirmarClick" />
+        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" onAction="#onConfirmarClick" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
         <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="401.0" style="-fx-background-color: grey;">
             <children>
+                <Group id="sexoCliente" layoutX="109.0" layoutY="125.0" />
                 <Label layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="116.0" text="Nombre del cliente" />
-                <ChoiceBox layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
-                <RadioButton layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="Mujer" />
-                <RadioButton layoutX="200.0" layoutY="92.0" mnemonicParsing="false" text="Hombre" />
+                <ComboBox fx:id="esEmpleado" layoutX="6.0" layoutY="89.0" prefWidth="150.0" />
+                <RadioButton layoutX="287.0" layoutY="93.0" mnemonicParsing="false" text="Mujer">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexoCliente" />
+               </toggleGroup></RadioButton>
+                <RadioButton layoutX="200.0" layoutY="92.0" mnemonicParsing="false" text="Hombre" toggleGroup="$sexoCliente" />
                 <CheckBox layoutX="10.0" layoutY="253.0" mnemonicParsing="false" text="Jubilado" />
                 <Label layoutY="169.0" prefHeight="17.0" prefWidth="109.0" text="Correo Electrónico" />
                 <Label layoutX="232.0" layoutY="249.0" prefHeight="25.0" prefWidth="92.0" text="Datos Extra" />
-            <Label layoutX="6.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
+            <TextField layoutX="6.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" promptText="Introduzca el nombre" style="-fx-background-color: white;" />
             <Label layoutX="6.0" layoutY="65.0" prefHeight="17.0" prefWidth="75.0" text="Empleado" />
             <Label layoutX="261.0" layoutY="65.0" prefHeight="17.0" prefWidth="40.0" text="Sexo" />
-            <Label layoutX="6.0" layoutY="196.0" prefHeight="17.0" prefWidth="133.0" style="-fx-background-color: white;" />
+            <TextField layoutX="6.0" layoutY="196.0" prefHeight="17.0" prefWidth="133.0" promptText="Introduzca el correo electronico" style="-fx-background-color: white;" />
             <Label layoutX="232.0" layoutY="169.0" text="Fecha de Nacimiento" />
-            <Label layoutX="232.0" layoutY="196.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
-            <Label layoutX="232.0" layoutY="285.0" prefHeight="128.0" prefWidth="144.0" style="-fx-background-color: white;" />
+            <DatePicker layoutX="232.0" layoutY="196.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
+            <TextField layoutX="232.0" layoutY="285.0" prefHeight="128.0" prefWidth="144.0" promptText="Introduzca posibles datos adicionales" style="-fx-background-color: white;" />
             </children>
             <opaqueInsets>
                 <Insets />
