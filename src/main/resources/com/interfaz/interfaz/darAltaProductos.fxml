@@ -18,18 +18,19 @@
         <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="346.0" style="-fx-background-color: grey;">
             <children>
                 <Group id="toggleGroup" layoutX="109.0" layoutY="125.0" />
-                <CheckBox fx:id="checkBox" layoutX="216.0" layoutY="95.0" mnemonicParsing="false" text="IVA Incluido" />
+                <CheckBox fx:id="iva" layoutX="216.0" layoutY="95.0" mnemonicParsing="false" text="IVA Incluido" />
                 <TextField fx:id="nombre" layoutX="6.0" layoutY="30.0" prefHeight="17.0" prefWidth="338.0" promptText="Nombre del producto" />
-                <DatePicker fx:id="date" layoutX="4.0" layoutY="213.0" prefHeight="17.0" prefWidth="338.0" promptText="Fecha de producción" />
-                <TextArea fx:id="textArea" layoutX="11.0" layoutY="284.0" prefHeight="128.0" prefWidth="195.0" promptText="Descripción de producto" />
-                <RadioButton fx:id="radio" layoutX="5.0" layoutY="163.0" mnemonicParsing="false" text="Procedencia Extranjera">
+                <DatePicker fx:id="fechaProd" layoutX="4.0" layoutY="213.0" prefHeight="17.0" prefWidth="338.0" promptText="Fecha de producción" />
+                <TextArea fx:id="desc" layoutX="11.0" layoutY="284.0" prefHeight="128.0" prefWidth="195.0" promptText="Descripción de producto" />
+                <RadioButton fx:id="procedenciaEx" layoutX="5.0" layoutY="163.0" mnemonicParsing="false" text="Procedencia Extranjera">
                     <toggleGroup>
                         <ToggleGroup fx:id="toggleGroup" />
-                    </toggleGroup></RadioButton>
-                <ComboBox fx:id="combo" layoutX="1.0" layoutY="91.0" prefWidth="150.0" />
+                    </toggleGroup>
+                </RadioButton>
+                <ComboBox fx:id="tipoProducto" layoutX="1.0" layoutY="91.0" prefWidth="150.0" />
                 <Label layoutX="14.0" layoutY="6.0" text="Nombre del producto" />
                 <Label layoutX="6.0" layoutY="74.0" text="Tipo de producto" />
-                <RadioButton layoutX="175.0" layoutY="163.0" mnemonicParsing="false" text="Procedencia Europea" toggleGroup="$toggleGroup" />
+                <RadioButton fx:id="procedenciaEur" layoutX="175.0" layoutY="163.0" mnemonicParsing="false" text="Procedencia Europea" toggleGroup="$toggleGroup" />
                 <Label layoutX="129.0" layoutY="125.0" text="Procedencia" />
                 <Label layoutX="5.0" layoutY="196.0" text="Fecha de producción" />
                 <Label layoutX="11.0" layoutY="254.0" text="Descrpción del producto" />
