@@ -31,15 +31,15 @@ public class Modelo {
         }
     }
 
-    public Object busquedaDatos(Object o) {
+    public int busquedaDatos(Object o) {
         if (o instanceof Cliente && listaClientes.contains(o)){
-            return o;
+            return listaClientes.indexOf(o);
         } else if (o instanceof Proveedor && listaProveedor.contains(o)) {
-            return o;
+            return listaProveedor.indexOf(o);
         } else if (o instanceof Producto && listaProductos.contains(o)) {
-            return o;
+            return listaProductos.indexOf(o);
         }
-        return null;
+        return -1;
     }
 
     public void darBaja(Object o) {
