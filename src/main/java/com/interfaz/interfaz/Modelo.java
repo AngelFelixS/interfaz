@@ -25,6 +25,7 @@ public class Modelo {
             listaProveedor.add((Proveedor) o);
         } else if (o instanceof Producto) {
             listaProductos.add((Producto) o);
+            System.out.println(o);
         }
     }
 

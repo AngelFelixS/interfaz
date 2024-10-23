@@ -33,6 +33,8 @@ public class ControladorProducto extends ControladorPrincipal{
     protected void onConfirmarAltaClick(ActionEvent event) {
         mensajeConfirmar.setOpacity(1);
         mensajeConfirmar.setDisable(false);
+        Producto p=new Producto(nombre.getText(),tipoProducto.getValue().toString(),procedenciaEur.isSelected(),fechaProd.getValue().toString(),iva.isSelected(),desc.getText());
+        HelloApplication.getModelo().darAlta(p);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
             mensajeConfirmar.setOpacity(0);
@@ -45,7 +47,7 @@ public class ControladorProducto extends ControladorPrincipal{
 
     @FXML
     protected void onBuscar(){
-        Producto p=null;
-        HelloApplication.getModelo().busquedaDatos(p);
+        Producto p=new Producto(nombre.getText(),tipoProducto.getValue().toString(),procedenciaEur.isSelected(),fechaProd.getValue().toString(),iva.isSelected(),desc.getText());
+
     }
 }
