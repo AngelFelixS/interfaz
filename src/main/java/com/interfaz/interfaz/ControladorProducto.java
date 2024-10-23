@@ -9,24 +9,26 @@ import javafx.util.Duration;
 
 public class ControladorProducto extends ControladorPrincipal{
     @FXML
-    private ComboBox combo;
+    private ComboBox tipoProducto;
     @FXML
-    private CheckBox checkBox;
+    private CheckBox iva;
     @FXML
-    private RadioButton radio;
+    private RadioButton procedenciaEur;
+    @FXML
+    private RadioButton procedenciaEx;
     @FXML
     private TextField nombre;
     @FXML
-    private DatePicker date;
+    private DatePicker fechaProd;
     @FXML
-    private TextArea textArea;
+    private TextArea desc;
 
     @FXML
     protected void inicializar(){
-        String[] opciones = {"a","b"};
-        combo.setPromptText("aaaaaaaaaaa");
-        combo.setItems(FXCollections.observableArrayList(opciones));
+        String[] opciones = {"Ropa","Electrodomestico","Mueble"};
+        tipoProducto.setItems(FXCollections.observableArrayList(opciones));
     }
+
     @FXML
     protected void onConfirmarAltaClick(ActionEvent event) {
         mensajeConfirmar.setOpacity(1);

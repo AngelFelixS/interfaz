@@ -3,7 +3,7 @@ package com.interfaz.interfaz;
 public class Producto {
     private String nombre;
     private String tipoProducto;
-    private boolean procedencia;
+    private boolean procedenciaEur;
     private boolean tieneIva;
     private String fechaProduccion;
     private String descripcionProducto;
@@ -11,7 +11,7 @@ public class Producto {
     public Producto(String nombre, String tipoProducto, boolean procedencia, String fechaProduccion, boolean tieneIva, String descripcionProducto) {
         this.nombre = nombre;
         this.tipoProducto = tipoProducto;
-        this.procedencia = procedencia;
+        this.procedenciaEur = procedencia;
         this.fechaProduccion = fechaProduccion;
         this.tieneIva = tieneIva;
         this.descripcionProducto = descripcionProducto;
@@ -25,8 +25,8 @@ public class Producto {
         this.tipoProducto = tipoProducto;
     }
 
-    public void setProcedencia(boolean procedencia) {
-        this.procedencia = procedencia;
+    public void setProcedenciaEur(boolean procedenciaEur) {
+        this.procedenciaEur = procedenciaEur;
     }
 
     public void setTieneIva(boolean tieneIva) {
@@ -49,8 +49,8 @@ public class Producto {
         return tipoProducto;
     }
 
-    public boolean isProcedencia() {
-        return procedencia;
+    public boolean isProcedenciaEur() {
+        return procedenciaEur;
     }
 
     public boolean tieneIva() {
