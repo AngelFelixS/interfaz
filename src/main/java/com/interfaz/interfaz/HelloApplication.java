@@ -21,7 +21,6 @@ public class HelloApplication extends Application {
         stage.setTitle("App");
         stage.setScene(principal);
         stage.show();
-
     }
 
     public static void cambiarScene(String fxml){

@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class   ControladorPrincipal {
     @FXML
-    private ImageView logo;
+    private Pane main;
     @FXML
     private Pane altaClientes;
     @FXML
@@ -97,6 +97,7 @@ public class   ControladorPrincipal {
 
     @FXML
     protected void onClickOpcion(ActionEvent event){
+        main.setStyle("-fx-background-image: null;");
         String src=event.getSource().toString();
         String id=src.split("=")[1].split(",")[0];
         if (!yaHayInterfaz) {

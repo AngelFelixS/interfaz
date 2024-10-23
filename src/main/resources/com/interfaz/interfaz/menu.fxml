@@ -2,10 +2,8 @@
 
 <?import javafx.scene.layout.*?>
 
-<!--CAMBIAR LO DEL CONTROLADOR QUE NO LO TENGA POR DEFECTO-->
-
 <?import javafx.scene.control.Button?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-image: url(logo_resized_1280x720.jpg);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorPrincipal">
+<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-image: url(logo_resized_1280x720.jpg);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorPrincipal">
     <fx:include fx:id="altaClientes" disable="true" opacity="0.0" source="darAltaClientes.fxml" />
     <fx:include fx:id="altaProductos" disable="true" opacity="0.0" source="darAltaProductos.fxml" />
     <fx:include fx:id="altaProveedores" disable="true" opacity="0.0" source="darAltaProveedor.fxml" />
