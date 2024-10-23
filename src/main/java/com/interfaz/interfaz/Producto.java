@@ -64,4 +64,16 @@ public class Producto {
     public String getDescripcionProducto() {
         return descripcionProducto;
     }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "nombre='" + nombre + '\'' +
+                ", tipoProducto='" + tipoProducto + '\'' +
+                ", procedenciaEur=" + procedenciaEur +
+                ", tieneIva=" + tieneIva +
+                ", fechaProduccion='" + fechaProduccion + '\'' +
+                ", descripcionProducto='" + descripcionProducto + '\'' +
+                '}';
+    }
 }
