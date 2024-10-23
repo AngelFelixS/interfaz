@@ -21,22 +21,25 @@ public class Modelo {
     public void darAlta(Object o) {
         if (o instanceof Cliente){
             listaClientes.add((Cliente) o);
+            System.out.println(o);
         } else if (o instanceof Proveedor) {
             listaProveedor.add((Proveedor) o);
+            System.out.println(o);
         } else if (o instanceof Producto) {
             listaProductos.add((Producto) o);
             System.out.println(o);
         }
     }
 
-    public void busquedaDatos(Object o) {
+    public Object busquedaDatos(Object o) {
         if (o instanceof Cliente && listaClientes.contains(o)){
-            System.out.println(o);
+            return o;
         } else if (o instanceof Proveedor && listaProveedor.contains(o)) {
-            System.out.println(o);
+            return o;
         } else if (o instanceof Producto && listaProductos.contains(o)) {
-            System.out.println(o);
+            return o;
         }
+        return null;
     }
 
     public void darBaja(Object o) {
@@ -57,6 +60,16 @@ public class Modelo {
 
         } else if (viejo instanceof Producto) {
 
+        }
+    }
+
+    public void insertarPosicionLista(Object o,int pos){
+        if (o instanceof Cliente){
+            listaClientes.add(pos,(Cliente) o);
+        } else if (o instanceof Proveedor) {
+            listaProveedor.add(pos,(Proveedor) o);
+        } else if (o instanceof Producto) {
+            listaProductos.add(pos,(Producto) o);
         }
     }
 

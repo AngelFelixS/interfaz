@@ -22,6 +22,7 @@ public class ControladorProducto extends ControladorPrincipal{
     private DatePicker fechaProd;
     @FXML
     private TextArea desc;
+    private Modelo modelo=HelloApplication.getModelo();
 
     @FXML
     protected void inicializar(){
@@ -34,7 +35,7 @@ public class ControladorProducto extends ControladorPrincipal{
         mensajeConfirmar.setOpacity(1);
         mensajeConfirmar.setDisable(false);
         Producto p=new Producto(nombre.getText(),tipoProducto.getValue().toString(),procedenciaEur.isSelected(),fechaProd.getValue().toString(),iva.isSelected(),desc.getText());
-        HelloApplication.getModelo().darAlta(p);
+        modelo.darAlta(p);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
             mensajeConfirmar.setOpacity(0);
@@ -48,6 +49,6 @@ public class ControladorProducto extends ControladorPrincipal{
     @FXML
     protected void onBuscar(){
         Producto p=new Producto(nombre.getText(),tipoProducto.getValue().toString(),procedenciaEur.isSelected(),fechaProd.getValue().toString(),iva.isSelected(),desc.getText());
-
+        modelo.busquedaDatos(p);
     }
 }

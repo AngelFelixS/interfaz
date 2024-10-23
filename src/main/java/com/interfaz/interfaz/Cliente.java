@@ -84,4 +84,18 @@ public class Cliente {
     public String getDatosExtra() {
         return datosExtra;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                ", empleado='" + empleado + '\'' +
+                ", sexo=" + sexo +
+                ", correoElectronico='" + correoElectronico + '\'' +
+                ", fechaNacimiento='" + fechaNacimiento + '\'' +
+                ", jubilado=" + jubilado +
+                ", datosExtra='" + datosExtra + '\'' +
+                '}';
+    }
 }

@@ -65,4 +65,16 @@ public class Proveedor {
     public String getFechaCreacionEmpresa() {
         return fechaCreacionEmpresa;
     }
+
+    @Override
+    public String toString() {
+        return "Proveedor{" +
+                "nombreEmpresa='" + nombreEmpresa + '\'' +
+                ", sector='" + sector + '\'' +
+                ", tipoEmpresa=" + tipoEmpresa +
+                ", tasaTransporte=" + tasaTransporte +
+                ", fechaCreacionEmpresa='" + fechaCreacionEmpresa + '\'' +
+                ", datosExtra='" + datosExtra + '\'' +
+                '}';
+    }
 }
