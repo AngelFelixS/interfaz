@@ -31,7 +31,7 @@ public class ControladorProveedor extends ControladorPrincipal{
     @FXML
     private TextField nombreProducto;
 
-    private Modelo modelo=HelloApplication.getModelo();
+    private Modelo modelo= App.getModelo();
 
 
     @FXML

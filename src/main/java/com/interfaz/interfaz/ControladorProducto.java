@@ -22,7 +22,7 @@ public class ControladorProducto extends ControladorPrincipal{
     private DatePicker fechaProd;
     @FXML
     private TextArea desc;
-    private Modelo modelo=HelloApplication.getModelo();
+    private Modelo modelo= App.getModelo();
 
     @FXML
     protected void inicializar(){
