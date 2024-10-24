@@ -37,12 +37,18 @@
                 <TextField layoutX="232.0" layoutY="285.0" prefHeight="128.0" prefWidth="144.0" promptText="Introduzca posibles datos adicionales" style="-fx-background-color: white;" />
                 <Label layoutX="232.0" layoutY="6.0" prefHeight="17.0" prefWidth="40.0" text="DNI" />
                 <TextField layoutX="229.0" layoutY="23.0" prefHeight="17.0" prefWidth="116.0" promptText="DNI" style="-fx-background-color: white;" />
+
             </children>
             <opaqueInsets>
                 <Insets />
             </opaqueInsets>
         </Pane>
-
+        <VBox fx:id="confirmarBaja" alignment="CENTER" disable="true" layoutX="285.0" layoutY="269.0" opacity="0.0" prefHeight="208.0" prefWidth="458.0" spacing="10.0" style="-fx-background-color: grey;">
+            <children>
+                <Label style="-fx-text-fill: blue;" text="Seguro que desea dar de alta a este clienta" />
+                <Button style="-fx-background-color: white;" text="Cancelar" />
+                <Button style="-fx-background-color: white;" text="Confirmar" />
+            </children></VBox>
     </children>
 
 </Pane>
