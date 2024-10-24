@@ -47,7 +47,7 @@ public class ControladorProducto extends ControladorPrincipal{
     }
 
     @FXML
-    protected void onBuscar(){
+    protected void onBuscar(ActionEvent event){
         //NO FUNCIONA POSIBLEMENTE
         Producto p=new Producto(nombre.getText(),tipoProducto.getValue().toString(),procedenciaEur.isSelected(),fechaProd.getValue().toString(),iva.isSelected(),desc.getText());
         modelo.insertarPosicionLista(p,modelo.busquedaDatos(p));

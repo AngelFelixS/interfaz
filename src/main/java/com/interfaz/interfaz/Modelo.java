@@ -33,13 +33,10 @@ public class Modelo {
     public void darAlta(Object o) {
         if (o instanceof Cliente){
             listaClientes.add((Cliente) o);
-            System.out.println(o);
         } else if (o instanceof Proveedor) {
             listaProveedor.add((Proveedor) o);
-            System.out.println(o);
         } else if (o instanceof Producto) {
             listaProductos.add((Producto) o);
-            System.out.println(o);
         }
     }
 
