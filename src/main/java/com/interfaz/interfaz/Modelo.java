@@ -18,6 +18,18 @@ public class Modelo {
         listaProveedor = new ArrayList<>();
     }
 
+    public ArrayList<Proveedor> getListaProveedor() {
+        return listaProveedor;
+    }
+
+    public ArrayList<Cliente> getListaClientes() {
+        return listaClientes;
+    }
+
+    public ArrayList<Producto> getListaProductos() {
+        return listaProductos;
+    }
+
     public void darAlta(Object o) {
         if (o instanceof Cliente){
             listaClientes.add((Cliente) o);
