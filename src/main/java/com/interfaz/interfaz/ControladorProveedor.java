@@ -60,8 +60,6 @@ public class ControladorProveedor extends ControladorPrincipal{
     protected void onModificarProveedorClick(ActionEvent event) {
 
         String nifActual = NIF.getText();
-
-
         Proveedor proveedorActual = null;
 
         for (Proveedor proveedor : modelo.getListaProveedor()) {

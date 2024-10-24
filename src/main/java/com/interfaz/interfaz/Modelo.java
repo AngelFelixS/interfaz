@@ -67,7 +67,16 @@ public class Modelo {
 
     public void modificarDatos(Object viejo, Object nuevo){
         if (viejo instanceof Cliente){
+            if (viejo instanceof Proveedor && nuevo instanceof Proveedor) {
+                Proveedor proveedorViejo = (Proveedor) viejo;
+                Proveedor proveedorNuevo = (Proveedor) nuevo;
 
+                int index = listaProveedor.indexOf(proveedorViejo);
+                if (index != -1) {
+                    listaProveedor.set(index, proveedorNuevo);
+                    System.out.println("Proveedor modificado: " + proveedorNuevo);
+                }
+            }
         } else if (viejo instanceof Proveedor) {
 
         } else if (viejo instanceof Producto) {
