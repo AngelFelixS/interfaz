@@ -1,6 +1,9 @@
 package com.interfaz.interfaz;
 
+import java.util.Objects;
+
 public class Proveedor {
+    private String nif;
     private String nombreEmpresa;
     private String sector;
     private boolean tipoEmpresa;
@@ -9,13 +12,22 @@ public class Proveedor {
     private String datosExtra;
 
 
-    public Proveedor(String nombreEmpresa, String sector, boolean tipoEmpresa, boolean tasaTransporte, String fechaCreacionEmpresa, String datosExtra) {
+    public Proveedor(String nif, String nombreEmpresa, String sector, boolean tipoEmpresa, boolean tasaTransporte, String fechaCreacionEmpresa, String datosExtra) {
+        this.nif=nif;
         this.nombreEmpresa = nombreEmpresa;
         this.sector = sector;
         this.tipoEmpresa = tipoEmpresa;
         this.tasaTransporte = tasaTransporte;
         this.fechaCreacionEmpresa = fechaCreacionEmpresa;
         this.datosExtra = datosExtra;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
+    public void setNif(String nif) {
+        this.nif = nif;
     }
 
     public void setNombreEmpresa(String nombreEmpresa) {
@@ -64,6 +76,20 @@ public class Proveedor {
 
     public String getFechaCreacionEmpresa() {
         return fechaCreacionEmpresa;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Proveedor proveedor = (Proveedor) o;
+        return Objects.equals(nif, proveedor.nif);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nif);
     }
 
     @Override

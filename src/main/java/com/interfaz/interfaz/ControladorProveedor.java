@@ -31,6 +31,9 @@ public class ControladorProveedor extends ControladorPrincipal{
     @FXML
     private TextField nombreProducto;
 
+    private Modelo modelo=HelloApplication.getModelo();
+
+
     @FXML
     protected void inicializar(){
         String[] opciones = {"Primario","Secundario","Terciario"};
@@ -41,8 +44,8 @@ public class ControladorProveedor extends ControladorPrincipal{
     protected void onConfirmarAltaClick(ActionEvent event) {
         mensajeConfirmar.setOpacity(1);
         mensajeConfirmar.setDisable(false);
-        Proveedor pr = new Proveedor(nombreEmpresa.getText(),(String) sectorProv.getValue(), SA.isSelected(), tasaTrasnporte.isSelected(), (date.getValue() != null) ? date.getValue().toString() : "", datosExtra.getText());
-        HelloApplication.getModelo().darAlta(pr);
+        Proveedor pr = new Proveedor(NIF.getText() ,nombreEmpresa.getText(),(String) sectorProv.getValue(), SA.isSelected(), tasaTrasnporte.isSelected(), (date.getValue() != null) ? date.getValue().toString() : "", datosExtra.getText());
+        modelo.darAlta(pr);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
             mensajeConfirmar.setOpacity(0);
@@ -52,4 +55,48 @@ public class ControladorProveedor extends ControladorPrincipal{
         });
         pause.play();
     }
+
+    @FXML
+    protected void onModificarProveedorClick(ActionEvent event) {
+
+        String nifActual = NIF.getText();
+
+
+        Proveedor proveedorActual = null;
+
+        for (Proveedor proveedor : modelo.getListaProveedor()) {
+            if (proveedor.getNif().equals(nifActual)) {
+                proveedorActual = proveedor;
+                break;
+            }
+        }
+
+        if (proveedorActual != null) {
+
+            Proveedor proveedorModificado = new Proveedor(
+                    NIF.getText(),
+                    nombreEmpresa.getText(),
+                    (String) sectorProv.getValue(),
+                    SA.isSelected(),
+                    tasaTrasnporte.isSelected(),
+                    (date.getValue() != null) ? date.getValue().toString() : "",
+                    datosExtra.getText()
+            );
+
+
+            modelo.modificarDatos(proveedorActual, proveedorModificado);
+
+            mensajeConfirmar.setOpacity(1);
+            mensajeConfirmar.setDisable(false);
+            PauseTransition pause = new PauseTransition(Duration.seconds(1));
+            pause.setOnFinished(e -> {
+                mensajeConfirmar.setOpacity(0);
+                mensajeConfirmar.setDisable(true);
+            });
+            pause.play();
+        } else {
+            System.out.println("Proveedor no encontrado");
+        }
+    }
+
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.geometry.Insets?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.interfaz.interfaz.ControladorPrincipal">
     <children>
-        <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="195.0" text="Modificar Proveedores" textAlignment="CENTER">
+        <Label layoutX="53.0" layoutY="155.0" prefHeight="95.0" prefWidth="205.0" text="Modificar Proveedores" textAlignment="CENTER">
             <font>
                 <Font size="20.0" />
             </font>
