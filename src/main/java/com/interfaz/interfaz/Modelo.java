@@ -72,5 +72,4 @@ public class Modelo {
             listaProductos.add(pos,(Producto) o);
         }
     }
-
 }

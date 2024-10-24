@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Duration;
 
+
 public class ControladorCliente extends ControladorPrincipal {
     @FXML
     private ComboBox esEmpleado;
@@ -26,6 +27,7 @@ public class ControladorCliente extends ControladorPrincipal {
     private DatePicker fechaNacimiento;
     @FXML
     private TextField datos;
+    private Modelo modelo=HelloApplication.getModelo();
     @FXML
     protected void inicializar(){
         String[] opciones = {"Si","No"};
@@ -51,5 +53,18 @@ public class ControladorCliente extends ControladorPrincipal {
     @FXML
     protected void onBuscar(){
         Cliente c=new Cliente(nombre.getText(),dni.getText(),esEmpleado.getValue().toString(),hombre.isSelected(), correoElectronico.getText(),fechaNacimiento.getValue().toString(),jubilado.isSelected(),datos.getText());
+    }
+
+    @FXML
+    protected void darBajaCliente(){
+        String dniActual = dni.getText();
+        Cliente c = null;
+        /*for (Cliente cliente : modelo.getListaClientes) {
+
+        }
+
+
+
+        HelloApplication.getModelo().darBaja();*/
     }
 }
