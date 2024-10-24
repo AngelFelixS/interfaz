@@ -80,7 +80,7 @@ public class ControladorCliente extends ControladorPrincipal {
             confirmarBaja.setOpacity(1);
             confirmarBaja.setDisable(false);
 
-            PauseTransition pause = new PauseTransition(Duration.seconds(1.5));  // Tiempo de visualización del mensaje
+            PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
             pause.setOnFinished(e -> {
                 confirmarBaja.setOpacity(0);
                 confirmarBaja.setDisable(true);
