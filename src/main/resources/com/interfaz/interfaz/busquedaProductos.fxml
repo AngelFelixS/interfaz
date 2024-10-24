@@ -11,7 +11,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button fx:id="volver" onAction="#onClickVolver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
+        <Button fx:id="volver" layoutX="65.0" layoutY="548.0" mnemonicParsing="false" onAction="#onClickVolver" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
         <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
         <Button layoutX="297.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="309.0" text="Consulta" />
         <Button layoutX="606.0" layoutY="373.0" mnemonicParsing="false" text="Modificar" />
@@ -22,7 +22,12 @@
         <Button layoutX="297.0" layoutY="348.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="309.0" text="Consulta" />
         <Button layoutX="606.0" layoutY="348.0" mnemonicParsing="false" text="Modificar" />
         <Button layoutX="672.0" layoutY="348.0" mnemonicParsing="false" text="Baja" />
-
+        <VBox fx:id="confirmarBaja" alignment="CENTER" disable="true" layoutX="285.0" layoutY="269.0" opacity="0.0" prefHeight="208.0" prefWidth="458.0" spacing="10.0" style="-fx-background-color: grey;">
+            <children>
+                <Label style="-fx-text-fill: blue;" text="Seguro que desea dar de alta a este clienta" />
+                <Button style="-fx-background-color: white;" text="Cancelar" />
+                <Button style="-fx-background-color: white;" text="Confirmar" />
+            </children></VBox>
 
     </children>
 
