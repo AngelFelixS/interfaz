@@ -45,7 +45,7 @@ public class ControladorProveedor extends ControladorPrincipal{
         mensajeConfirmar.setOpacity(1);
         mensajeConfirmar.setDisable(false);
         Proveedor pr = new Proveedor(NIF.getText() ,nombreEmpresa.getText(),(String) sectorProv.getValue(), SA.isSelected(), tasaTrasnporte.isSelected(), (date.getValue() != null) ? date.getValue().toString() : "", datosExtra.getText());
-        modelo.darAlta(pr);
+        HelloApplication.getModelo().darAlta(pr);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
             mensajeConfirmar.setOpacity(0);
