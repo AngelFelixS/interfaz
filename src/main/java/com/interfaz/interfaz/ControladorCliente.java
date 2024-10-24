@@ -61,22 +61,35 @@ public class ControladorCliente extends ControladorPrincipal {
     }
 
     @FXML
-    protected void darBajaCliente(){
-        String dniActual = dni.getText();
-        Cliente c = null;
+    protected void darBajaCliente() {
+        String dniActual = dni.getText();  // Obtenemos el DNI ingresado.
+        Cliente clienteAEliminar = null;
+
+
         for (Cliente cliente : modelo.getListaClientes()) {
-            if (cliente.getDni().equals(dniActual)){
-                c = cliente;
+            if (cliente.getDni().equals(dniActual)) {
+                clienteAEliminar = cliente;
                 break;
             }
         }
-        if (c!=null){
+
+        if (clienteAEliminar != null) {
+            modelo.darBaja(clienteAEliminar);
+            System.out.println("Cliente eliminado: " + clienteAEliminar);
+
             confirmarBaja.setOpacity(1);
             confirmarBaja.setDisable(false);
-            HelloApplication.getModelo().darBaja(c);
+
+            PauseTransition pause = new PauseTransition(Duration.seconds(1.5));  // Tiempo de visualización del mensaje
+            pause.setOnFinished(e -> {
+                confirmarBaja.setOpacity(0);
+                confirmarBaja.setDisable(true);
+            });
+            pause.play();
+        } else {
+            System.out.println("Cliente no encontrado con DNI: " + dniActual);
+
         }
-
-
-
     }
+
 }
