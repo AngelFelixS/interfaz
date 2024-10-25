@@ -10,8 +10,12 @@ import javafx.util.Duration;
 
 
 public class ControladorCliente extends ControladorPrincipal {
-
+    @FXML
     public VBox confirmarBaja;
+    @FXML
+    private Button cancelarButton;
+    @FXML
+    private Button confirmarButton;
     @FXML
     private ComboBox esEmpleado;
     @FXML
@@ -62,34 +66,21 @@ public class ControladorCliente extends ControladorPrincipal {
 
     @FXML
     protected void darBajaCliente() {
-        String dniActual = dni.getText();  // Obtenemos el DNI ingresado.
-        Cliente clienteAEliminar = null;
-
-
-        for (Cliente cliente : modelo.getListaClientes()) {
-            if (cliente.getDni().equals(dniActual)) {
-                clienteAEliminar = cliente;
-                break;
-            }
-        }
-
-        if (clienteAEliminar != null) {
-            modelo.darBaja(clienteAEliminar);
-            System.out.println("Cliente eliminado: " + clienteAEliminar);
-
-            confirmarBaja.setOpacity(1);
-            confirmarBaja.setDisable(false);
-
-            PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
-            pause.setOnFinished(e -> {
-                confirmarBaja.setOpacity(0);
-                confirmarBaja.setDisable(true);
-            });
-            pause.play();
-        } else {
-            System.out.println("Cliente no encontrado con DNI: " + dniActual);
-
-        }
+        confirmarBaja.setOpacity(1);
+        confirmarBaja.setDisable(false);
+        cancelarButton.setOnAction(e -> ocultarConfirmacion());
+        confirmarButton.setOnAction(e -> {ocultarConfirmacion();
+        });
+    }
+    private void ocultarConfirmacion() {
+        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+        pause.setOnFinished(e -> {
+            confirmarBaja.setOpacity(0);
+            confirmarBaja.setDisable(true);
+            confirmarBaja.getParent().setOpacity(0);
+            confirmarBaja.getParent().setDisable(true);
+        });
+        pause.play();
     }
 
 }
