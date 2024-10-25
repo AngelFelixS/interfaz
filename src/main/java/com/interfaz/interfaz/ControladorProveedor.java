@@ -5,11 +5,17 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
+import java.io.IOException;
 
 
 public class ControladorProveedor extends ControladorPrincipal{
+    @FXML
+    public VBox confirmarBaja;
+    @FXML
+    private Button consulta;
     @FXML
     private CheckBox tasaTrasnporte;
     @FXML
@@ -45,7 +51,7 @@ public class ControladorProveedor extends ControladorPrincipal{
         mensajeConfirmar.setOpacity(1);
         mensajeConfirmar.setDisable(false);
         Proveedor pr = new Proveedor(NIF.getText() ,nombreEmpresa.getText(),(String) sectorProv.getValue(), SA.isSelected(), tasaTrasnporte.isSelected(), (date.getValue() != null) ? date.getValue().toString() : "", datosExtra.getText());
-        HelloApplication.getModelo().darAlta(pr);
+        App.getModelo().darAlta(pr);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
             mensajeConfirmar.setOpacity(0);
@@ -98,6 +104,10 @@ public class ControladorProveedor extends ControladorPrincipal{
         } else {
             System.out.println("Proveedor no encontrado");
         }
+    }
+    @FXML
+    private void onConsultaClick(ActionEvent event) {
+        App.cambiarScene("consultaProveedores.fxml");
     }
 
 }
