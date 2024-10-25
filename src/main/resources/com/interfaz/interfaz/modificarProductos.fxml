@@ -14,7 +14,7 @@
             </font>
         </Label>
         <Button layoutX="65.0" layoutY="548.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" onAction="#onClickVolver"/>
-        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
+        <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" onAction="#onClickVolver"/>
         <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="346.0" style="-fx-background-color: grey;">
             <children>
                 <Group id="toggleGroup" layoutX="109.0" layoutY="125.0" />
