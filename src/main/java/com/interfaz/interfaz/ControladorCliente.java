@@ -62,7 +62,7 @@ public class ControladorCliente extends ControladorPrincipal {
 
     @FXML
     protected void darBajaCliente() {
-        String dniActual = dni.getText();
+        String dniActual = dni.getText();  // Obtenemos el DNI ingresado.
         Cliente clienteAEliminar = null;
 
 
