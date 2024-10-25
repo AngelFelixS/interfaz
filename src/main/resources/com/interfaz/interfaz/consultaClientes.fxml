@@ -11,7 +11,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button layoutX="39.0" layoutY="552.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
+        <Button layoutX="39.0" layoutY="552.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" onAction="#onClickVolver"/>
         <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
         <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="401.0" style="-fx-background-color: grey;">
             <children>
@@ -29,7 +29,7 @@
                 <Label layoutX="232.0" layoutY="169.0" text="Fecha de Nacimiento" />
                 <Label layoutX="232.0" layoutY="196.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: white;" />
                 <Label layoutX="232.0" layoutY="285.0" prefHeight="128.0" prefWidth="144.0" style="-fx-background-color: white;" />
-            <Button layoutX="2.0" layoutY="360.0" mnemonicParsing="false" text="MOD" />
+            <Button layoutX="2.0" layoutY="360.0" mnemonicParsing="false" text="MOD" onAction="#onModificarClick"/>
             <Button layoutX="2.0" layoutY="385.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" text="Baja" onAction="#darBajaCliente"/>
             </children>
         </Pane>

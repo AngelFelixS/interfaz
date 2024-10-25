@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -13,6 +14,12 @@ import java.io.IOException;
 import static com.interfaz.interfaz.App.stage;
 
 public class ControladorProducto extends ControladorPrincipal{
+    @FXML
+    private VBox confirmarBaja;
+    @FXML
+    private Button cancelarButton;
+    @FXML
+    private Button confirmarButton;
     @FXML
     private ComboBox tipoProducto;
     @FXML
@@ -58,12 +65,32 @@ public class ControladorProducto extends ControladorPrincipal{
         modelo.insertarPosicionLista(p,modelo.busquedaDatos(p));
     }
 
-    public static void cambiarScene(String fxml){
-        FXMLLoader nuevoLoader=new FXMLLoader(App.class.getResource(fxml));
-        try {
-            stage.getScene().setRoot(nuevoLoader.load());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @FXML
+    private void onConsultaClick(ActionEvent event) {
+        App.cambiarScene("consultaProductos.fxml");
+    }
+    @FXML
+    private void onModificarClick(ActionEvent event) {
+        App.cambiarScene("modificarProductos.fxml");
+    }
+
+    @FXML
+    protected void darBajaProducto() {
+        confirmarBaja.setOpacity(1);
+        confirmarBaja.setDisable(false);
+
+        cancelarButton.setOnAction(e -> ocultarConfirmacion());
+        confirmarButton.setOnAction(e -> {ocultarConfirmacion();
+        });
+    }
+    private void ocultarConfirmacion() {
+        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+        pause.setOnFinished(e -> {
+            confirmarBaja.setOpacity(0);
+            confirmarBaja.setDisable(true);
+            confirmarBaja.getParent().setOpacity(0);
+            confirmarBaja.getParent().setDisable(true);
+        });
+        pause.play();
     }
 }

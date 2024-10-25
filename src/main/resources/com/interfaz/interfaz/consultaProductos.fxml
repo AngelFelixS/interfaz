@@ -13,7 +13,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button layoutX="65.0" layoutY="548.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" />
+        <Button layoutX="65.0" layoutY="548.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="163.0" text="Volver Atrás" onAction="#onClickVolver"/>
         <Button layoutX="995.0" layoutY="555.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="156.0" text="Confirmar" />
         <Pane layoutX="435.0" layoutY="201.0" prefHeight="426.0" prefWidth="346.0" style="-fx-background-color: grey;">
             <children>
@@ -33,8 +33,8 @@
             <Label layoutX="129.0" layoutY="125.0" text="Procedencia" />
             <Label layoutX="5.0" layoutY="196.0" text="Fecha de producción" />
             <Label layoutX="11.0" layoutY="254.0" text="Descrpción del producto" />
-            <Button layoutX="294.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="MOD" />
-            <Button layoutX="294.0" layoutY="383.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Baja" />
+            <Button layoutX="294.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="MOD" onAction="#onModificarClick"/>
+            <Button layoutX="294.0" layoutY="383.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Baja" onAction="#darBajaProducto"/>
             </children>
             <opaqueInsets>
                 <Insets />

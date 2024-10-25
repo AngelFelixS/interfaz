@@ -13,6 +13,10 @@ import java.io.IOException;
 
 public class ControladorProveedor extends ControladorPrincipal{
     @FXML
+    private Button cancelarButton;
+    @FXML
+    private Button confirmarButton;
+    @FXML
     public VBox confirmarBaja;
     @FXML
     private Button consulta;
@@ -108,6 +112,30 @@ public class ControladorProveedor extends ControladorPrincipal{
     @FXML
     private void onConsultaClick(ActionEvent event) {
         App.cambiarScene("consultaProveedores.fxml");
+    }
+    @FXML
+    private void onModificarClick(ActionEvent event) {
+        App.cambiarScene("modificarProveedores.fxml");
+    }
+
+    @FXML
+    protected void darBajaProveedor() {
+        confirmarBaja.setOpacity(1);
+        confirmarBaja.setDisable(false);
+
+        cancelarButton.setOnAction(e -> ocultarConfirmacion());
+        confirmarButton.setOnAction(e -> {ocultarConfirmacion();
+        });
+    }
+    private void ocultarConfirmacion() {
+        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+        pause.setOnFinished(e -> {
+            confirmarBaja.setOpacity(0);
+            confirmarBaja.setDisable(true);
+            confirmarBaja.getParent().setOpacity(0);
+            confirmarBaja.getParent().setDisable(true);
+        });
+        pause.play();
     }
 
 }

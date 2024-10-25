@@ -64,6 +64,14 @@ public class ControladorCliente extends ControladorPrincipal {
     protected void onBuscar(){
         Cliente c=new Cliente(nombre.getText(),dni.getText(),esEmpleado.getValue().toString(),hombre.isSelected(), correoElectronico.getText(),fechaNacimiento.getValue().toString(),jubilado.isSelected(),datos.getText());
     }
+    @FXML
+    private void onConsultaClick(ActionEvent event) {
+        App.cambiarScene("consultaClientes.fxml");
+    }
+    @FXML
+    private void onModificarClick(ActionEvent event) {
+        App.cambiarScene("modificarClientes.fxml");
+    }
 
     @FXML
     protected void darBajaCliente() {
