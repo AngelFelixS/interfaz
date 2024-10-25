@@ -24,6 +24,12 @@
         <Button layoutX="672.0" layoutY="348.0" mnemonicParsing="false" text="Baja" onAction="#darBajaCliente" />
       <TextField fx:id="busqueda" layoutX="627.0" layoutY="190.0" prefHeight="25.0" prefWidth="368.0" promptText="Busqueda" />
       <Button onAction="#onBuscar" layoutX="995.0" layoutY="190.0" mnemonicParsing="false" text="Buscar" />
+        <VBox fx:id="confirmarBaja" alignment="CENTER" disable="true" layoutX="285.0" layoutY="269.0" opacity="0.0" prefHeight="208.0" prefWidth="458.0" spacing="10.0" style="-fx-background-color: grey;">
+            <children>
+                <Label style="-fx-text-fill: blue;" text="Seguro que desea dar de baja a este cliente" />
+                <Button style="-fx-background-color: white;" text="Cancelar" />
+                <Button style="-fx-background-color: white;" text="Confirmar" />
+            </children></VBox>
 
 
     </children>

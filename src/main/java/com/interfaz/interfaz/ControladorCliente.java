@@ -32,7 +32,7 @@ public class ControladorCliente extends ControladorPrincipal {
     private TextField datos;
     @FXML
     private VBox mensajeAltaCliente;
-    private Modelo modelo=HelloApplication.getModelo();
+    private Modelo modelo= App.getModelo();
     @FXML
     protected void inicializar(){
         String[] opciones = {"Si","No"};
@@ -44,7 +44,7 @@ public class ControladorCliente extends ControladorPrincipal {
         mensajeAltaCliente.setOpacity(1);
         mensajeAltaCliente.setDisable(false);
         Cliente c=new Cliente(nombre.getText(),dni.getText(),esEmpleado.getValue().toString(),hombre.isSelected(), correoElectronico.getText(),fechaNacimiento.getValue().toString(),jubilado.isSelected(),datos.getText());
-        HelloApplication.getModelo().darAlta(c);
+        App.getModelo().darAlta(c);
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(e -> {
             mensajeAltaCliente.setOpacity(0);

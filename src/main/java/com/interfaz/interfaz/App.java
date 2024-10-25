@@ -1,14 +1,13 @@
 package com.interfaz.interfaz;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class App extends Application {
     private static Stage stage;
     private static Modelo modelo;
 
@@ -16,7 +15,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         this.stage=stage;
         this.modelo=new Modelo();
-        FXMLLoader principalLoader = new FXMLLoader(HelloApplication.class.getResource("menu.fxml"));
+        FXMLLoader principalLoader = new FXMLLoader(App.class.getResource("menu.fxml"));
         Scene principal = new Scene(principalLoader.load(), 1280, 720);
         stage.setTitle("App");
         stage.setScene(principal);
@@ -24,7 +23,7 @@ public class HelloApplication extends Application {
     }
 
     public static void cambiarScene(String fxml){
-        FXMLLoader nuevoLoader=new FXMLLoader(HelloApplication.class.getResource(fxml));
+        FXMLLoader nuevoLoader=new FXMLLoader(App.class.getResource(fxml));
         try {
             stage.getScene().setRoot(nuevoLoader.load());
         } catch (IOException e) {
