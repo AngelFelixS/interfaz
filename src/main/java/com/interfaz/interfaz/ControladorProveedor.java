@@ -55,7 +55,10 @@ public class ControladorProveedor extends ControladorPrincipal{
         });
         pause.play();
     }
-
+    @FXML
+    protected void onBuscar(){
+        Proveedor pr = new Proveedor(NIF.getText() ,nombreEmpresa.getText(),(String) sectorProv.getValue(), SA.isSelected(), tasaTrasnporte.isSelected(), (date.getValue() != null) ? date.getValue().toString() : "", datosExtra.getText());
+    }
     @FXML
     protected void onModificarProveedorClick(ActionEvent event) {
 
